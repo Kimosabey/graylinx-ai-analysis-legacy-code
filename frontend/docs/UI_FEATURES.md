@@ -1,5 +1,7 @@
 # UI Features - Jupiter Dashboard
 
+![UI/UX Design System](../../docs/assets/ui_ux.png)
+
 The Jupiter UI provides a rich set of features for facility management and HVAC optimization.
 
 ## Key Views & Functionalities

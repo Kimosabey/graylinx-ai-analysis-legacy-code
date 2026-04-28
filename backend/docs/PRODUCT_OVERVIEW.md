@@ -1,5 +1,7 @@
 # Graylinx / Jupiter Platform Overview
 
+![Graylinx Hero](../../docs/assets/hero.png)
+
 Graylinx (also referred to as Jupiter) is an advanced integrated Building Management System (iBMS) and HVAC optimization platform. It focuses on energy efficiency, automated control, and real-time monitoring of large-scale cooling and ventilation systems.
 
 ## Core Purpose

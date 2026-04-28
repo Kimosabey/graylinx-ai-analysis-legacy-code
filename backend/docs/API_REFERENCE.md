@@ -1,4 +1,6 @@
-# API Reference - Graylinx (Jupiter)
+# API Reference - Graylinx
+
+![System Flow](../../docs/assets/system_flow.png)
 
 The Graylinx backend provides a wide range of REST APIs for managing the HVAC hierarchy, retrieving telemetry data, and controlling equipment.
 

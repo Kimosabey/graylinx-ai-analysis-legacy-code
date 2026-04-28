@@ -1,5 +1,7 @@
 # Backend Architecture - Graylinx (Jupiter)
 
+![Backend Architecture](../../docs/assets/architecture.png)
+
 The Graylinx backend is a robust Node.js application designed to handle high-frequency data ingestion, complex control logic, and real-time communication with HVAC hardware.
 
 ## Core Components
