@@ -1,0 +1,56 @@
+.rs-bar {
+    position: relative !important;
+  }
+  
+  .rs-handle {
+    position: absolute;
+    top: -4px;
+    left: -10px;
+  }
+  
+  .rs-range {
+    stroke-width: 23px;
+  }
+  
+  .rs-range-color {
+    background: linear-gradient(90deg, #fff, #f44);
+  }
+  
+  .rs-svg-mode .rs-border {
+    stroke: #fff !important;
+  }
+  .rs-control .rs-split .rs-path {
+    opacity: 1;
+  }
+  .dot {
+    height: 228px;
+    width: 263px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0, 128, 128, 0.2);
+  }
+  
+  .inner-circle {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+  }
+  
+  .rs-block .rs-inner {
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .rs-block.rs-border {
+    border: 435px;
+  }
+  
+  .rs-seperator.rs-border {
+    border: 12px;
+  }
+  
+  /* .rs-border {
+    border: 0;
+  } */
+  

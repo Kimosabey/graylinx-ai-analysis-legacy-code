@@ -1,0 +1,18 @@
+{
+  "scenarios": {
+    "active_scenario": {
+      "name": "Primary_Variable_WaterCooled_Chiller_Plant",
+      "step": "initialization",
+      "status": "in_progress"
+    }
+  },
+  "faulty_devices": [],
+  "duration_seconds": {
+    "flowrate_gt_flowrate_monitor_seconds_duration": 0,
+    "cond_temp_gt_temp_monitor_seconds_duration": 0,
+    "wc_chiller_add_condition_duration": 0
+  },
+  "shutdown_action": {
+    "failed": false
+  }
+}

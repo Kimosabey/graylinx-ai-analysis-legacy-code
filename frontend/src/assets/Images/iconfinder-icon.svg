@@ -1,0 +1,21 @@
+<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="258" width="258" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_1" d="m193.06,129.08a64.62,64.62 0 0 1 -40.18,59.18a17.27,17.27 0 0 0 -10.64,16l0,0a6.68,6.68 0 0 1 -6.68,6.68l-14.2,0a6.68,6.68 0 0 1 -6.68,-6.68l0,0a17.25,17.25 0 0 0 -10.62,-16a64.61,64.61 0 1 1 89,-59.19l0,0.01z" class="cls-1"/>
+  <rect stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_2" y="219.79" x="115.92" width="25.08" ry="4.47" rx="4.47" height="11.71" class="cls-1"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_3" y2="24.5" y1="49.65" x2="128.46" x1="128.46" class="cls-2"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_4" y2="53.87" y1="71.65" x2="199.36" x1="181.58" class="cls-2"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_5" y2="181.56" y1="199.35" x2="73.5" x1="55.72" class="cls-2"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_6" y2="124.77" y1="124.77" x2="230.57" x1="205.42" class="cls-2"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_7" y2="124.77" y1="124.77" x2="50.58" x1="25.43" class="cls-2"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_8" y2="197.51" y1="179.73" x2="201.2" x1="183.42" class="cls-2"/>
+  <line stroke-linecap="round" stroke-width="6px" stroke-miterlimit="10" stroke="#000000" fill="none" id="svg_9" y2="71.65" y1="53.87" x2="75.34" x1="57.56" class="cls-2"/>
+  <polygon stroke-width="5px" stroke-linejoin="round" stroke-linecap="round" stroke="#000000" fill="none" id="svg_10" points="156.6 129.23 133.29 129.23 133.65 84.28 100.93 135.25 124.24 135.25 123.88 179.73 156.6 129.23" class="cls-3"/>
+ </g>
+</svg>

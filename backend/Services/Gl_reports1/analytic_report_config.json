@@ -1,0 +1,231 @@
+{
+  "_comment_project": "─── Project settings ─── Change project_id per site. Restart server after any change — procedures are regenerated automatically.",
+  "project_id":                  "GL_CHILLER_PLANT",
+  "scheduler_interval_minutes":  15,
+  "time_bucket_minutes":         15,
+
+  "_comment_committed": "Committed performance tracking. null = disabled (no committed SQL generated). To enable: replace null with {} and configure ikwtr_matrix below.",
+  "committed": null,
+
+  "_comment_ikwtr_matrix": "iKW/TR lookup matrix. Only used when committed is not null. true = use built-in Danfoss matrix; false + provide custom matrix object.",
+  "use_default_ikwtr_matrix": false,
+  "ikwtr_matrix": null,
+
+  "_comment_ambient": "Ambient sensor. null = no ambient sensor at this site. source: 'raw' = EAV table (param_id/param_value); 'metric' = metric table (metric_id/metric_value).",
+  "ambient": {
+    "table":  "cpm_0001bc0000_metric",
+    "source": "metric",
+    "params": {
+      "ambient_temp": "ambient_temp",
+      "humidity":     "humidity"
+    }
+  },
+
+  "_comment_btu_meter": "BTU meter. null = no BTU meter at this site.",
+  "btu_meter": {
+    "table":  "coh_0001c00000_om_p",
+    "source": "raw",
+    "params": {
+      "outlet_temp":    "par_outlet_temp_00",
+      "inlet_temp":     "par_inlet_temp_00",
+      "actual_flow":    "par_actual_flow_00",
+      "actual_power":   "par_actual_power_00",
+      "energy_consump": "par_energy_consump_00"
+    }
+  },
+
+  "_comment_performance": "Performance benchmarks used only when committed is not null.",
+  "performance": {
+    "chw_pump_kw_per_chiller": 48.1,
+    "cdw_pump_kw_per_chiller": 25.89,
+    "ct_fan_kw_per_chiller":   33
+  },
+
+  "_comment_device_types": [
+    "Define ALL parameters ONCE per device type.",
+    "Every device of the same type shares these params — only table changes per instance.",
+    "Changing a param here affects ALL devices of that type at once.",
+    "CT fans use {{N}} placeholder — replaced with fan_index per fan automatically."
+  ],
+  "device_types": {
+
+    "_comment_CHILLER": "2-compressor Danfoss chiller. Define params once — shared by all chillers in the plant.",
+    "CHILLER": {
+      "calc_type": "TR_TRH_KWH",
+
+      "_comment_params": "Raw param IDs from the device source table. run_status: device ON if ANY of these = 1/active.",
+      "params": {
+        "run_status":   ["sts_on_off_00"],
+        "chw_entering": "par_evap_entering_temp_00",
+        "chw_leaving":  "sts_evap_leaving_temp_00",
+        "cdw_entering": "par_cond_entering_temp_00",
+        "cdw_leaving":  "par_cond_leaving_temp_00",
+        "chiller_flow": "sts_evap_flow_00"
+      },
+
+      "_comment_kw": "Power params. Auto per-compressor gating: _01 kW gated by _01 on/off, _02 by _02. use_abs=true → take |value|.",
+       "kw":  { "source_type": "ENERGY_METER", "params": ["par_avg_active_power_00"], "use_abs": false },
+
+      "_comment_tr": "TR formula. Changing formula needs server restart to regenerate procedures. multiplier = 0.33 for m³/h flow, 3.517 for kW flow.",
+      "tr": {
+        "formula":        "flow * (entering - leaving) * multiplier",
+        "flow_param":     "chiller_flow",
+        "entering_param": "chw_entering",
+        "leaving_param":  "chw_leaving",
+        "multiplier":     0.33
+      },
+
+      "_comment_kwh": "kWh calculation method. CALCULATE = kW × bucket_hours. DIRECT_CUMULATIVE_CARRY = read cumulative energy counter and take delta.",
+      "kwh": { "source_type": "DIRECT_CUMULATIVE_CARRY",  "params": ["par_energy_00"], "carry_forward": true },
+
+      "_comment_display_params": [
+        "Extra params to store in gl_device_timeseries. Two formats are supported:",
+        "",
+        "  Format 1 — Raw param (store AVG as-is, no arithmetic):",
+        "    'metric_id': 'raw_param_id'",
+        "    Example: 'comp_load_01': 'par_comp_load_01'",
+        "    → Reads par_comp_load_01 from source table, stores AVG value as metric 'comp_load_01'",
+        "",
+        "  Format 2 — Formula (arithmetic on one or more params):",
+        "    'metric_id': { 'params': ['param_id_1', 'param_id_2'], 'formula': 'p0 - p1' }",
+        "    → p0, p1, p2... are positional references to the params array (zero-indexed)",
+        "    → Standard arithmetic supported: +  -  *  /",
+        "    Example: 'cdw_delta_t': { 'params': ['par_cond_entering_temp_00', 'par_cond_leaving_temp_00'], 'formula': 'p0 - p1' }",
+        "    → Stores (entering - leaving) as metric 'cdw_delta_t'"
+      ],
+      "display_params": {
+        "chiller_load_percentage":  "par_comp_percent_load_00",
+        "temp_setpoint": "cmd_evap_leaving_temp_00",
+        "cdw_entering":  "par_cond_entering_temp_00",
+        "cdw_leaving":   "par_cond_leaving_temp_00",
+        "cdw_delta_t":   { "params": ["par_cond_leaving_temp_00", "par_cond_entering_temp_00"], "formula": "p0 - p1" }
+      },
+
+      "run_hours":         { "param": "par_comp_run_hrs_00" },
+      "rated_capacity_tr": null,
+      "include_in_plant_totals": true
+    },
+
+    "_comment_PRIMARY_PUMP": "Primary CHW circulation pump. kWh from cumulative energy counter (delta between buckets).",
+    "PRIMARY_PUMP": {
+      "calc_type": "KWH",
+      "params": { "run_status": ["sts_on_off_00"] },
+      "kw":  { "params": ["par_avg_power_00"], "use_abs": true },
+      "kwh": { "source_type": "DIRECT_CUMULATIVE_CARRY", "params": ["par_energy_00"], "carry_forward": true },
+      "run_hours": { "param": "par_run_hours_00" },
+      "include_in_plant_totals": true
+    },
+
+    "_comment_CONDENSER_PUMP": "Condenser water pump. kW from a separate energy meter table. Supply energy_meter_table per instance.",
+    "CONDENSER_PUMP": {
+      "calc_type": "KWH",
+      "params": { "run_status": ["sts_on_off_00"] },
+      "kw":  {"params": ["par_avg_power_00"]},
+      "kwh": { "source_type": "DIRECT_CUMULATIVE_CARRY", "params": ["par_energy_00"], "carry_forward": true },
+      "run_hours": { "param": "par_run_hours_00" },
+      "include_in_plant_totals": true
+    },
+
+        "_comment_SECONDARY_PUMP": "Condenser water pump. kW from a separate energy meter table. Supply energy_meter_table per instance.",
+    "SECONDARY_PUMP": {
+      "calc_type": "KWH",
+      "params": { "run_status": ["sts_on_off_00"] },
+      "kw":  {"params": ["par_avg_power_00"]},
+      "kwh": { "source_type": "DIRECT_CUMULATIVE_CARRY", "params": ["par_energy_00"], "carry_forward": true },
+      "run_hours": { "param": "par_run_hours_00" },
+      "include_in_plant_totals": true
+    },
+
+    "_comment_COOLING_TOWER": "Cooling tower parent — container only. Add a fans array to each CT instance (key + fan_index per fan).",
+    "COOLING_TOWER": {
+      "calc_type": "CONTAINER",
+      "include_in_plant_totals": true,
+      "fan_type": "CT_FAN"
+    },
+
+    "_comment_CT_FAN": "Single cooling tower fan. {{N}} is replaced with fan_index per fan — defined once, used for all fans across all CTs.",
+    "CT_FAN": {
+      "calc_type": "KWH",
+      "params": { "run_status": ["sts_fan_frequency_{{N}}"] },
+      "kw":  {"source_type": "ENERGY_METER", "params": ["par_avg_active_power_{{N}}"],  "use_abs": false },
+      "kwh": { "source_type": "DIRECT_CUMULATIVE_CARRY", "params": ["par_energy_00"], "carry_forward": true },
+      "run_hours": { "param": "par_run_hours_00" },
+      "include_in_plant_totals": true
+    }
+
+  },
+
+  "_comment_devices": [
+    "List every device GROUP at this site.",
+    "Each group has: type (must match device_types key), count (for visibility), and instances[].",
+    "count must equal the number of entries in instances — it is shown here so you can immediately see how many devices of each type exist.",
+    "Each instance needs only: key (unique device ID) + table (raw EAV source table) + any overrides.",
+    "All params/formulas come from device_types — nothing repeated per instance.",
+    "",
+    "Override options per instance:",
+    "  rated_capacity_tr   — chiller rated TR for load% (number or null)",
+    "  energy_meter_table  — separate kW source table (CONDENSER_PUMP only)",
+    "  fans                — fan list for COOLING_TOWER: [{key, fan_index}]",
+    "  kw.use_abs          — override use_abs for this instance only"
+  ],
+  "devices": [
+
+    {
+      "type":  "CHILLER",
+      "count": 2,
+      "_comment": "3 chillers — same params/formula, different source tables. Add/remove instances to add/remove chillers.",
+      "instances": [
+        { "key": "CH1", "table": "ch_0001b00000_om_p","energy_meter_table": "em_0001000000_om_p"},
+        { "key": "CH2", "table": "ch_0002b00000_om_p", "energy_meter_table": "em_0002000000_om_p"  }
+      ]
+    },
+
+    {
+      "type":  "PRIMARY_PUMP",
+      "count": 3,
+      "_comment": "3 primary CHW pumps — same params, different tables.",
+      "instances": [
+        { "key": "PV1", "table": "pu_0001b10000_om_p" },
+        { "key": "PV2", "table": "pu_0002b10000_om_p" },
+        { "key": "PV3", "table": "pu_0003b10000_om_p" }
+      ]
+    },
+
+    {
+      "type":  "CONDENSER_PUMP",
+      "count": 3,
+      "_comment": "3 condenser pumps. kW from energy_meter_table (separate from run_status table).",
+      "instances": [
+        { "key": "CP01", "table": "condpu_0001b40000_om_p"},
+        { "key": "CP02", "table": "condpu_0002b40000_om_p"},
+        { "key": "CP03", "table": "condpu_0003b40000_om_p"}
+      ]
+    },
+
+       {
+      "type":  "SECONDARY_PUMP",
+      "count": 6,
+      "_comment": "6 seconadry pumps. kW from energy_meter_table (separate from run_status table).",
+      "instances": [
+        { "key": "SP01", "table": "secpu_0001b30000_om_p"},
+        { "key": "SP02", "table": "secpu_0002b30000_om_p"},
+        { "key": "SP03", "table": "secpu_0003b30000_om_p"},
+        { "key": "SP04", "table": "secpu_0004b30000_om_p"},
+        { "key": "SP05", "table": "secpu_0005b30000_om_p"},
+        { "key": "SP06", "table": "secpu_0006b30000_om_p"}
+      ]
+    },
+
+    {
+      "type":  "COOLING_TOWER",
+      "count": 3,
+      "_comment": "3 cooling towers, each with 2 fans. fans[] defines fan key + fan_index (used to substitute {{N}} in CT_FAN params).",
+      "instances": [
+        { "key": "CT1", "table": "ct_0001b70000_om_p", "fans": [{"key":"CT1_F1","fan_index":"01","energy_meter_table":"em_0007000000_om_p"}] },
+        { "key": "CT2", "table": "ct_0002b70000_om_p", "fans": [{"key":"CT2_F1","fan_index":"01","energy_meter_table":"em_0008000000_om_p"}] },
+        { "key": "CT3", "table": "ct_0003b70000_om_p", "fans": [{"key":"CT3_F1","fan_index":"01","energy_meter_table":"em_0009000000_om_p"}] }
+      ]
+    }
+
+  ]
+}

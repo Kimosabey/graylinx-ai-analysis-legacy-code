@@ -1,0 +1,74 @@
+{
+    "id": "989cf525-10bf-474f-abed-e109ff7af68f",
+    "title": "Koramanghala",
+    "type": "campus",
+    "expanded": true,
+    "children": [
+        {
+            "id": "22e36819-da54-4817-8f95-9be0866c19eb",
+            "title": "co-work inc",
+            "type": "building",
+            "expanded": true,
+            "children": [
+                {
+                    "id": "ba27ad62-e6a0-4fcc-ae40-64a4e6e9ee34",
+                    "title": "Parking Floor-1",
+                    "floor_type": "parking",
+                    "type": "floor",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "id": "04a3ccd2-147a-4bd4-b91d-f9f7737099f4",
+                            "title": "parking zone 1",
+                            "type": "zone",
+                            "expanded": false
+                        }
+                    ],
+                    "activated": true
+                },
+                {
+                    "id": "fe1b2980-aecf-4235-96e2-e655cdbe009b",
+                    "title": "Floor-1",
+                    "floor_type": "wlms",
+                    "type": "floor",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+                            "title": "Software-area",
+                            "type": "zone",
+                            "expanded": false
+                        },
+                        {
+                            "id": "d611ddd1-0888-434a-bde4-d2e2a81f3936",
+                            "title": "meeting-room-1",
+                            "type": "zone",
+                            "expanded": false
+                        },
+                        {
+                            "id": "a3ca8648-9db9-404d-88da-1e6b14bc88bb",
+                            "title": "Firmware-area",
+                            "type": "zone",
+                            "expanded": false
+                        }
+                    ]
+                },
+                {
+                    "id": "27ef9c62-807f-4184-b3d5-364d8780546d",
+                    "title": "Floor-2",
+                    "floor_type": "wlms",
+                    "type": "floor",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "id": "9d350384-a621-4cda-9094-0bafe1dc5766",
+                            "title": "meeting-room-2",
+                            "type": "zone",
+                            "expanded": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

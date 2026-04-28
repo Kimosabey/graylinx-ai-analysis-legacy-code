@@ -1,0 +1,138 @@
+{
+  "wc_chiller": {
+    "timeout": 90,
+    "key": "NONGL_SS_CHILLER",
+    "on_off": "cmd_on_off_00",
+    "status": "sts_on_off_00",
+    "auto_status": "sts_auto_manual_00",
+    "ch_valve_status": "sts_evap_vlv_on_off_00",
+    "ch_valve_on_off": "cmd_evap_vlv_on_off_00",
+    "ch_valve_water_flow": "sts_evap_flow_00",
+    "cond_valve_on_off": "cmd_cond_vlv_on_off_00",
+    "cond_valve_status": "sts_cond_vlv_on_off_00",
+    "cond_valve_water_flow": "sts_cond_flow_00",
+    "fault": "alm_trip_00",
+    "cond_water_head_sup_temp": "par_cdh_sp_temp_00",
+    "cond_water_head_sup_temp_set": "par_cdw_set_point_00",
+    "motor_percent_fla": "CH_Motor_Percent_FLA",
+    "alarms": ["alm_trip_00"]
+  },
+  "priv_seq_panel": {
+    "timeout": 30,
+    "key": "NONGL_SS_PRIMARY_SEQ_PANEL",
+    "on_off": "cmd_on_off_00",
+    "status": "sts_on_off_00",
+    "fault": "alm_trip_00",
+    "auto_status": "sts_auto_manual_00"
+  },
+  "sec_seq_panel": {
+    "timeout": 30,
+    "key": "NONGL_SS_SECONDARY_SEQ_PANEL",
+    "on_off": "cmd_on_off_00",
+    "status": "sts_on_off_00",
+    "fault": "alm_trip_00",
+    "auto_status": "sts_auto_manual_00"
+  },
+  "prim_pump": {
+    "timeout": 30,
+    "key": "NONGL_SS_PRIMARY_PUMP",
+    "on_off": "cmd_on_off_00",
+    "auto_status": "sts_auto_manual_00",
+    "status": "sts_on_off_00",
+    "fault": "alm_trip_00"
+  },
+  "sec_pump": {
+    "timeout": 30,
+    "key": "NONGL_SS_SECONDARY_PUMPS",
+    "on_off": "cmd_on_off_00",
+    "auto_status": "sts_auto_manual_00",
+    "status": "sts_on_off_00",
+    "fault": "alm_trip_00"
+  },
+  "cond_pump": {
+    "timeout": 30,
+    "key": "NONGL_SS_CONDENSER_PUMPS",
+    "on_off": "cmd_on_off_00",
+    "auto_status": "sts_auto_manual_00",
+    "status": "sts_on_off_00",
+    "fault": "alm_trip_00",
+    "alarms": ["alm_trip_00"]
+  },
+  "prim_var_pump": {
+    "timeout": 30,
+    "key": "NONGL_SS_PRIMARY_PUMP",
+    "on_off": "cmd_on_off_00",
+    "auto_status": "sts_auto_manual_00",
+    "status": "sts_on_off_00",
+    "vfd_on_off": "cmd_pump_vfd_frequency_00",
+    "vfd_status": "sts_pump_vfd_frequency_00",
+    "fault": "alm_trip_00",
+    "alarms": ["alm_trip_00"]
+  },
+  "cool_tower": {
+    "timeout": 30,
+    "key": "NONGL_SS_COOLING_TOWER",
+    "inlet_valve_on_off": "cmd_vlv_on_off_00",
+    "inlet_valve_status": "sts_vlv_on_off_01",
+    "outlet_valve_on_off": "cmd_vlv_on_off_00",
+    "outlet_valve_status": "sts_vlv_on_off_02",
+    "inlet_outlet_valve_on_off": "cmd_vlv_on_off_00",
+    "inlet_outlet_valve_status": "sts_vlv_on_off_01",
+    "fault": "alm_trip_00",
+    "auto_status": "sts_auto_manual_00",
+    "status": "sts_on_off_00",
+    "on_off": "cmd_on_off_00"
+  },
+  "cool_tower_var_fan": {
+    "key": "NONGL_SS_CT_VARIABLE_FAN",
+    "timeout": null,
+    "auto_status": "sts_auto_manual_00",
+    "on_off": "cmd_on_off_00",
+    "status": "sts_on_off_00",
+    "fault": "alm_fan_trip_00",
+    "vfd_on_off": "cmd_fan_vfd_frequency_00",
+    "vfd_status": "sts_fan_vfd_frequency_00"
+  },
+  "ac_chiller": {
+    "timeout": 30,
+    "key": "NONGL_SS_AIR_COOLLED_CHILLER",
+    "on_off": "cmd_on_off_00",
+    "status": "sts_on_off_00",
+    "auto_status": "sts_auto_manual_00",
+    "ch_valve_status": "sts_evap_vlv_on_off_00",
+    "ch_valve_on_off": "cmd_evap_vlv_on_off_00",
+    "ch_water_flow": "par_dpt_00"
+  },
+  "cpm": {
+    "timeout": 30,
+    "key": "NONGL_SS_CPM"
+  },
+  "headers": {
+    "timeout": 30,
+    "key": "NONGL_SS_COMMON_HEADER",
+    "ac_ch_key": "NONGL_SS_AIR_COOLED_HEADER",
+    "com_key": "NONGL_SS_COMMON_HEADER",
+    "ch_wc_head_STemp": "par_cwh_sp_temp_00",
+    "ch_wc_head_temp_set": "par_chw_set_point_00",
+    "ch_water_head_ret_temp": "par_cwh_rt_temp_00",
+    "ch_wc_rt_set": "CWH_RT_SP",
+    "cond_water_head_sup_temp": "par_cdh_sp_temp_00",
+    "cond_water_head_sup_temp_set": "par_cdw_set_point_00",
+    "cond_water_head_ret_temp": "par_cdh_rt_temp_00",
+    "cond_water_head_ret_temp_set": "par_cdw_set_point_00",
+    "diff_pres_head": "DPT_H",
+    "diff_pres_head_set": "DPT_H_SP"
+  },
+  "flow_meter": {
+    "timeout": 5,
+    "key": "NONGL_SS_FLOW_METER",
+    "flow_rate": "btu_meter_actual_flow_00"
+  },
+  "idu": {
+    "fan_speed": {
+      "fan_speed_low": 25,
+      "fan_speed_high": 100,
+      "fan_speed_medium": 50
+    }
+  }
+}

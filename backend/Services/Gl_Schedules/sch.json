@@ -1,0 +1,148 @@
+{
+    "id": "ce3d2f58-7cc2-4d69-bdba-b2e575cd2c3b",
+    "title": "Graylinx_campus",
+    "type": "campus",
+    "expanded": true,
+    "children": [
+        {
+            "id": "39777109-7767-4997-98b0-ccefdaae988a",
+            "title": "Graylinx_Building",
+            "type": "building",
+            "expanded": true,
+            "children": [
+                {
+                    "id": "1ba80b05-21ea-49cf-ab9a-e883dac38193",
+                    "title": "Floor-2",
+                    "floor_type": null,
+                    "type": "floor",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "id": "31ad48e2-ef5c-4397-8360-30373fa1f2f2",
+                            "title": "zone-1",
+                            "type": "zone",
+                            "expanded": true,
+                            "children": [
+                                {
+                                    "id": "2a1ae4f4-2dac-4317-9fbf-5b2fb43f9823",
+                                    "title": "jig-area-2",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "bbf85b3b-6026-489b-aa41-5e04b4313ee4",
+                                    "title": "jig-area-1",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "bc770421-d20c-4ba7-bba9-bad1e2e265c5",
+                                    "title": "area-1",
+                                    "type": "area",
+                                    "expanded": false
+                                }
+                            ]
+                        }
+                    ],
+                    "activated": true
+                },
+                {
+                    "id": "b8f96ee7-500d-4e38-9f5e-213b9e49e90c",
+                    "title": "Floor-1",
+                    "floor_type": null,
+                    "type": "floor",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "id": "fbed53c4-e68e-4583-93a0-88319b5d0b91",
+                            "title": "workstation",
+                            "type": "zone",
+                            "expanded": true,
+                            "children": [
+                                {
+                                    "id": "17120cca-88e8-432d-a546-201281e1b9e8",
+                                    "title": "Sale_room",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "3e799321-201d-419c-868d-b0d870843155",
+                                    "title": "Area-wac",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "50ef7521-74a6-4d5d-a8f8-dfa36c575ec3",
+                                    "title": "louge",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "782de374-c8f1-4432-82ef-fc6278f1a2ac",
+                                    "title": "passage",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "7f245e26-9b3c-4cd4-bd1c-0f952e46b0d5",
+                                    "title": "Software",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "9d1e8de0-1fd0-406e-8fb8-e11faf2dce4c",
+                                    "title": "Hardware",
+                                    "type": "area",
+                                    "expanded": false
+                                },
+                                {
+                                    "id": "e45519ce-3551-4a23-a803-830cbeb5bedd",
+                                    "title": "Firmware",
+                                    "type": "area",
+                                    "expanded": false
+                                }
+                            ]
+                        },
+                        {
+                            "id": "faf1aafa-81aa-4160-8add-b070684fb6d2",
+                            "title": "Confernce_Zone",
+                            "type": "zone",
+                            "expanded": true,
+                            "children": [
+                                {
+                                    "id": "a78f091c-c555-452f-9596-305f892d6596",
+                                    "title": "confernce_room_area",
+                                    "type": "area",
+                                    "expanded": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "ebab874f-002c-4349-ad61-64a638482518",
+                    "title": "floor-3",
+                    "floor_type": null,
+                    "type": "floor",
+                    "expanded": true,
+                    "children": [
+                        {
+                            "id": "7d8842e5-cd02-4bbf-b241-72a9a8c4eebb",
+                            "title": "zone_graylinx",
+                            "type": "zone",
+                            "expanded": true,
+                            "children": [
+                                {
+                                    "id": "435641bb-47ed-481d-9c44-6824a3384c52",
+                                    "title": "my_area_gray",
+                                    "type": "area",
+                                    "expanded": false
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

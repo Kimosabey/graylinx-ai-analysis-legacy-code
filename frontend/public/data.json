@@ -1,0 +1,2560 @@
+{
+    "buildings": [
+        {
+            "name": "Moksha_mansion",
+            "id": "55a47599-34b5-465c-b8ae-386ea658d0d5",
+            "deviceStatus": {
+                "total_count": 20,
+                "status": [
+                    {
+                        "device_name": "FW-1-PIR",
+                        "zone_name": "Firmware-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150c1dee522",
+                        "created_at": "2021-08-05 10:04:44",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "HW-2-PIR",
+                        "zone_name": "Software-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150e300e019",
+                        "created_at": "2021-08-05 09:58:17",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "PASSAGE-PIR",
+                        "zone_name": "Passage_Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150479545a8",
+                        "created_at": "2021-08-05 10:04:44",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "Conf-THL-3",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "5003015054cb7147",
+                        "created_at": "2021-08-05 10:04:53",
+                        "data": "{\n  \"Sensor_type\": \"THL\",\n  \"battery\": 90,\n  \"humidity\": {\n    \"value\": 78.4230651855469\n  },\n  \"luminousity\": {\n    \"value\": 3\n  },\n  \"temperature\": {\n    \"value\": 25.3191814422607\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "Conf_THL",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "500301502f4f5282",
+                        "created_at": "2021-07-09 13:10:23",
+                        "data": "{\n  \"battery\": 41.31887935871083,\n  \"temperature\": {\n    \"value\": 29.26548451548144\n  },\n  \"humidity\": {\n    \"value\": 48.54406269722817\n  },\n  \"luminousity\": {\n    \"value\": 408\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "vandana-cabin-PIR",
+                        "zone_name": "Lounge_Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150cbecb58f",
+                        "created_at": "2021-08-05 09:59:52",
+                        "data": "{\n  \"battery\": 90,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "Lab2-PIR-2",
+                        "zone_name": "Lab-2",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "5001015038899620",
+                        "created_at": "2021-07-09 13:10:22",
+                        "data": "{\n  \"battery\": 44.4337459955481,\n  \"occupancy\": true\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "CE0_thl",
+                        "zone_name": "CEO-Cabin",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50030150981f81fe",
+                        "created_at": "2021-07-09 13:10:23",
+                        "data": "{\n  \"battery\": 49.93494634651246,\n  \"temperature\": {\n    \"value\": 24.696577363259774\n  },\n  \"humidity\": {\n    \"value\": 45.91213729023947\n  },\n  \"luminousity\": {\n    \"value\": 401\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "conf_room-PIR-2",
+                        "zone_name": "Lab-2",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "500101503b70dc02",
+                        "created_at": "2021-08-05 09:38:59",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "Pantry_Pir",
+                        "zone_name": "Pantry",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150086dd9dd",
+                        "created_at": "2021-08-05 10:04:44",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "conf_room-PIR-1",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150dd9cfa01",
+                        "created_at": "2021-08-05 09:36:38",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "SW-2-PIR",
+                        "zone_name": "Hardware-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "5001015049eec9a8",
+                        "created_at": "2021-08-05 10:06:26",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 1\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "CE0_Room_PIR",
+                        "zone_name": "CEO-Cabin",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150de3149a6",
+                        "created_at": "2021-08-05 09:39:22",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "SW-1-PIR",
+                        "zone_name": "Hardware-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150f0381c84",
+                        "created_at": "2021-08-05 10:05:32",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "FW-2-PIR",
+                        "zone_name": "Firmware-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "500101508dca87c7",
+                        "created_at": "2021-08-05 09:57:34",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 1\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "conf-thl-2",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50030150e4bf32c2",
+                        "created_at": "2021-07-09 13:10:23",
+                        "data": "{\n  \"battery\": 49.94036558308512,\n  \"temperature\": {\n    \"value\": 32.80161346971967\n  },\n  \"humidity\": {\n    \"value\": 47.31906322380654\n  },\n  \"luminousity\": {\n    \"value\": 406\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "HW-1-PIR",
+                        "zone_name": "Software-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150d4cd31a1",
+                        "created_at": "2021-08-05 10:04:44",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "OFC_ENTRY-PIR",
+                        "zone_name": "Passage_Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "5001015091900040",
+                        "created_at": "2021-08-05 10:05:26",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "Lab1-PIR-1",
+                        "zone_name": "Lab-1",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50010150fe477368",
+                        "created_at": "2021-08-05 09:57:40",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    },
+                    {
+                        "device_name": "Lab1-PIR-2",
+                        "zone_name": "Lab-1",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "500101508ecffb7e",
+                        "created_at": "2021-08-05 09:58:41",
+                        "data": "{\n  \"battery\": 100,\n  \"occupancy\": 0\n}",
+                        "device_type": "occupancy_sensor",
+                        "status": "Inactive",
+                        "color": "dark",
+                        "background": "rgba(253,153,18,1)"
+                    }
+                ]
+            },
+            "floors": [
+                {
+                    "id": "8e91370d-c640-4f61-9de4-a44911997d20",
+                    "name": "Floor-1",
+                    "description": null,
+                    "floor_image": null,
+                    "type": "wlms",
+                    "pm2_5LatestStatus": [
+                        {
+                            "deviceId": "e9e21d7e-f772-4040-8778-fa768ded819d",
+                            "deviceName": "AQS-1",
+                            "coordinates": {
+                                "x": 241.234,
+                                "y": 380.325
+                            },
+                            "data": {
+                                "pm2_5": {
+                                    "value": 35,
+                                    "color": "#33cc33"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "e9e21d7e-f772-4040-8778-fa768ded819d"
+                            }
+                        }
+                    ],
+                    "co2LatestStatus": [
+                        {
+                            "deviceId": "e9e21d7e-f772-4040-8778-fa768ded819d",
+                            "deviceName": "AQS-1",
+                            "coordinates": {
+                                "x": 241.234,
+                                "y": 380.325
+                            },
+                            "data": {
+                                "co2": {
+                                    "value": 506,
+                                    "color": "#33cc33"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "e9e21d7e-f772-4040-8778-fa768ded819d"
+                            }
+                        }
+                    ],
+                    "noiseLatestStatus": [
+                        {
+                            "deviceId": "e9e21d7e-f772-4040-8778-fa768ded819d",
+                            "deviceName": "AQS-1",
+                            "coordinates": {
+                                "x": 241.234,
+                                "y": 380.325
+                            },
+                            "data": {
+                                "noise": {
+                                    "value": 64,
+                                    "color": "#ffff00"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "e9e21d7e-f772-4040-8778-fa768ded819d"
+                            }
+                        }
+                    ],
+                    "lumLatestStatus": [
+                        {
+                            "deviceId": "7a430a68-4f75-44b9-8fcb-4eefa5be1b0a",
+                            "deviceName": "CE0_thl",
+                            "coordinates": {
+                                "x": 345.64,
+                                "y": 178
+                            },
+                            "data": {
+                                "luminousity": {
+                                    "value": 401,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "7a430a68-4f75-44b9-8fcb-4eefa5be1b0a"
+                            }
+                        },
+                        {
+                            "deviceId": "443c3b48-8a3a-4ac8-a029-8c2f5c002504",
+                            "deviceName": "Conf_THL",
+                            "coordinates": {
+                                "x": 86.64,
+                                "y": 95
+                            },
+                            "data": {
+                                "luminousity": {
+                                    "value": 408,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "443c3b48-8a3a-4ac8-a029-8c2f5c002504"
+                            }
+                        },
+                        {
+                            "deviceId": "dc06f8d8-5c96-49a8-a341-089d76c86e6b",
+                            "deviceName": "conf-thl-2",
+                            "coordinates": {
+                                "x": 86.64,
+                                "y": 219
+                            },
+                            "data": {
+                                "luminousity": {
+                                    "value": 406,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "dc06f8d8-5c96-49a8-a341-089d76c86e6b"
+                            }
+                        },
+                        {
+                            "deviceId": "35ac7e27-e28a-4200-bfee-b7b625fb4fb1",
+                            "deviceName": "Conf-THL-3",
+                            "coordinates": {
+                                "x": 137.63,
+                                "y": 151.89
+                            },
+                            "data": {
+                                "luminousity": {
+                                    "value": 3,
+                                    "color": "#002699"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "35ac7e27-e28a-4200-bfee-b7b625fb4fb1"
+                            }
+                        }
+                    ],
+                    "tempLatestStatus": [
+                        {
+                            "deviceId": "7a430a68-4f75-44b9-8fcb-4eefa5be1b0a",
+                            "deviceName": "CE0_thl",
+                            "coordinates": {
+                                "x": 345.64,
+                                "y": 178
+                            },
+                            "data": {
+                                "temperature": {
+                                    "value": 24.696577363259774,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "7a430a68-4f75-44b9-8fcb-4eefa5be1b0a"
+                            }
+                        },
+                        {
+                            "deviceId": "443c3b48-8a3a-4ac8-a029-8c2f5c002504",
+                            "deviceName": "Conf_THL",
+                            "coordinates": {
+                                "x": 86.64,
+                                "y": 95
+                            },
+                            "data": {
+                                "temperature": {
+                                    "value": 29.26548451548144,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "443c3b48-8a3a-4ac8-a029-8c2f5c002504"
+                            }
+                        },
+                        {
+                            "deviceId": "dc06f8d8-5c96-49a8-a341-089d76c86e6b",
+                            "deviceName": "conf-thl-2",
+                            "coordinates": {
+                                "x": 86.64,
+                                "y": 219
+                            },
+                            "data": {
+                                "temperature": {
+                                    "value": 32.80161346971967,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "dc06f8d8-5c96-49a8-a341-089d76c86e6b"
+                            }
+                        },
+                        {
+                            "deviceId": "35ac7e27-e28a-4200-bfee-b7b625fb4fb1",
+                            "deviceName": "Conf-THL-3",
+                            "coordinates": {
+                                "x": 137.63,
+                                "y": 151.89
+                            },
+                            "data": {
+                                "temperature": {
+                                    "value": 25.3191814422607,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "35ac7e27-e28a-4200-bfee-b7b625fb4fb1"
+                            }
+                        }
+                    ],
+                    "data": {
+                        "temperature": {
+                            "max": 32.80161346971967,
+                            "min": 24.696577363259774,
+                            "avg": 28.020714197680395
+                        },
+                        "humidity": {
+                            "max": 78.4230651855469,
+                            "min": 45.91213729023947,
+                            "avg": 55.04958209920527
+                        },
+                        "luminousity": {
+                            "max": 408,
+                            "min": 3,
+                            "avg": 304.5
+                        },
+                        "co2": {
+                            "max": 506,
+                            "min": 506,
+                            "avg": 506
+                        },
+                        "tvoc": {
+                            "max": 4006,
+                            "min": 4006,
+                            "avg": 4006
+                        },
+                        "pm2_5": {
+                            "max": 35,
+                            "min": 35,
+                            "avg": 35
+                        },
+                        "pm10": {
+                            "max": 47,
+                            "min": 47,
+                            "avg": 47
+                        },
+                        "noise": {
+                            "max": 64,
+                            "min": 64,
+                            "avg": 64
+                        },
+                        "conf_room_occupancy": 0,
+                        "seat_occupancy": 0,
+                        "energy_consumption": 26885
+                    },
+                    "humLatestStatus": [
+                        {
+                            "deviceId": "7a430a68-4f75-44b9-8fcb-4eefa5be1b0a",
+                            "deviceName": "CE0_thl",
+                            "coordinates": {
+                                "x": 345.64,
+                                "y": 178
+                            },
+                            "data": {
+                                "humidity": {
+                                    "value": 45.91213729023947,
+                                    "color": " #00ff00"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "7a430a68-4f75-44b9-8fcb-4eefa5be1b0a"
+                            }
+                        },
+                        {
+                            "deviceId": "443c3b48-8a3a-4ac8-a029-8c2f5c002504",
+                            "deviceName": "Conf_THL",
+                            "coordinates": {
+                                "x": 86.64,
+                                "y": 95
+                            },
+                            "data": {
+                                "humidity": {
+                                    "value": 48.54406269722817,
+                                    "color": " #00ff00"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "443c3b48-8a3a-4ac8-a029-8c2f5c002504"
+                            }
+                        },
+                        {
+                            "deviceId": "dc06f8d8-5c96-49a8-a341-089d76c86e6b",
+                            "deviceName": "conf-thl-2",
+                            "coordinates": {
+                                "x": 86.64,
+                                "y": 219
+                            },
+                            "data": {
+                                "humidity": {
+                                    "value": 47.31906322380654,
+                                    "color": " #00ff00"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "dc06f8d8-5c96-49a8-a341-089d76c86e6b"
+                            }
+                        },
+                        {
+                            "deviceId": "35ac7e27-e28a-4200-bfee-b7b625fb4fb1",
+                            "deviceName": "Conf-THL-3",
+                            "coordinates": {
+                                "x": 137.63,
+                                "y": 151.89
+                            },
+                            "data": {
+                                "humidity": {
+                                    "value": 78.4230651855469,
+                                    "color": "#ffff00"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "35ac7e27-e28a-4200-bfee-b7b625fb4fb1"
+                            }
+                        }
+                    ],
+                    "pm10LatestStatus": [
+                        {
+                            "deviceId": "e9e21d7e-f772-4040-8778-fa768ded819d",
+                            "deviceName": "AQS-1",
+                            "coordinates": {
+                                "x": 241.234,
+                                "y": 380.325
+                            },
+                            "data": {
+                                "pm10": {
+                                    "value": 47,
+                                    "color": "#ffff00"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "e9e21d7e-f772-4040-8778-fa768ded819d"
+                            }
+                        }
+                    ],
+                    "tvocLatestStatus": [
+                        {
+                            "deviceId": "e9e21d7e-f772-4040-8778-fa768ded819d",
+                            "deviceName": "AQS-1",
+                            "coordinates": {
+                                "x": 241.234,
+                                "y": 380.325
+                            },
+                            "data": {
+                                "tvoc": {
+                                    "value": 4006,
+                                    "color": "#EB0F2C"
+                                }
+                            },
+                            "last24hrData": {
+                                "_24hrData": [],
+                                "min": 0,
+                                "max": 0,
+                                "device_id": "e9e21d7e-f772-4040-8778-fa768ded819d"
+                            }
+                        }
+                    ],
+                    "lumZone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#EB0F2C",
+                            "value": 272.3333333333333,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#EB0F2C",
+                            "value": 401,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "humZone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": " #00ff00",
+                            "value": 58.095397035527206,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": " #00ff00",
+                            "value": 45.91213729023947,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "pm2_5Zone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#33cc33",
+                            "value": 35,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "pm10Zone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#ffff00",
+                            "value": 47,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "noiseZone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#ffff00",
+                            "value": 64,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "co2Zone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#33cc33",
+                            "value": 506,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "tempZone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#EB0F2C",
+                            "value": 29.128759809153934,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#EB0F2C",
+                            "value": 24.696577363259774,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ],
+                    "tvocZone": [
+                        {
+                            "id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    144.429,
+                                    252.912
+                                ],
+                                [
+                                    35.154,
+                                    63.487
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    222.359,
+                                    759.074
+                                ],
+                                [
+                                    36.037,
+                                    670.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    300.759,
+                                    758.525
+                                ],
+                                [
+                                    230.037,
+                                    667.899
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    301.059,
+                                    152.375
+                                ],
+                                [
+                                    152.909,
+                                    63.225
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    379.559,
+                                    213.174
+                                ],
+                                [
+                                    310.109,
+                                    63.374
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                            "color": "#EB0F2C",
+                            "value": 4006,
+                            "bound": [
+                                [
+                                    228.004,
+                                    657.962
+                                ],
+                                [
+                                    35.259,
+                                    265.924
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.154,
+                                    455.937
+                                ],
+                                [
+                                    310.809,
+                                    315.224
+                                ]
+                            ]
+                        },
+                        {
+                            "id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                            "color": "#fafafa",
+                            "value": 0,
+                            "bound": [
+                                [
+                                    380.109,
+                                    607.075
+                                ],
+                                [
+                                    310.554,
+                                    467.187
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "data": {
+                "temperature": {
+                    "max": 32.80161346971967,
+                    "min": 24.696577363259774,
+                    "avg": 28.020714197680395
+                },
+                "humidity": {
+                    "max": 78.4230651855469,
+                    "min": 45.91213729023947,
+                    "avg": 55.04958209920527
+                },
+                "luminousity": {
+                    "max": 408,
+                    "min": 3,
+                    "avg": 304.5
+                },
+                "co2": {
+                    "max": 506,
+                    "min": 506,
+                    "avg": 506
+                },
+                "tvoc": {
+                    "max": 4006,
+                    "min": 4006,
+                    "avg": 4006
+                },
+                "pm2_5": {
+                    "max": 35,
+                    "min": 35,
+                    "avg": 35
+                },
+                "pm10": {
+                    "max": 47,
+                    "min": 47,
+                    "avg": 47
+                },
+                "noise": {
+                    "max": 64,
+                    "min": 64,
+                    "avg": 64
+                },
+                "conf_room_occupancy": 0,
+                "seat_occupancy": 0,
+                "energy_consumption": 26885
+            },
+            "systemAlerts": {
+                "total_count": 25,
+                "alerts": [
+                    {
+                        "device_name": "Conf-THL-3",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "5003015054cb7147",
+                        "created_at": "2021-08-05 10:04:53",
+                        "data": "{\n  \"Sensor_type\": \"THL\",\n  \"battery\": 90,\n  \"humidity\": {\n    \"value\": 78.4230651855469\n  },\n  \"luminousity\": {\n    \"value\": 3\n  },\n  \"temperature\": {\n    \"value\": 25.3191814422607\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "priority": "Low",
+                        "color": "dark",
+                        "background": "#FFD700",
+                        "tag": "Network Loss",
+                        "message": "Device hasn't communicated since\n\t\t\t  1 days"
+                    },
+                    {
+                        "device_name": "Conf_THL",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "500301502f4f5282",
+                        "created_at": "2021-07-09 13:10:23",
+                        "data": "{\n  \"battery\": 41.31887935871083,\n  \"temperature\": {\n    \"value\": 29.26548451548144\n  },\n  \"humidity\": {\n    \"value\": 48.54406269722817\n  },\n  \"luminousity\": {\n    \"value\": 408\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "priority": "Low",
+                        "color": "dark",
+                        "background": "#FFD700",
+                        "tag": "Network Loss",
+                        "message": "Device hasn't communicated since\n\t\t\t  28 days"
+                    },
+                    {
+                        "device_name": "conf-thl-2",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50030150e4bf32c2",
+                        "created_at": "2021-07-09 13:10:23",
+                        "data": "{\n  \"battery\": 49.94036558308512,\n  \"temperature\": {\n    \"value\": 32.80161346971967\n  },\n  \"humidity\": {\n    \"value\": 47.31906322380654\n  },\n  \"luminousity\": {\n    \"value\": 406\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "priority": "Low",
+                        "color": "dark",
+                        "background": "#FFD700",
+                        "tag": "Network Loss",
+                        "message": "Device hasn't communicated since\n\t\t\t  28 days"
+                    },
+                    {
+                        "device_name": "CE0_thl",
+                        "zone_name": "CEO-Cabin",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50030150981f81fe",
+                        "created_at": "2021-07-09 13:10:23",
+                        "data": "{\n  \"battery\": 49.93494634651246,\n  \"temperature\": {\n    \"value\": 24.696577363259774\n  },\n  \"humidity\": {\n    \"value\": 45.91213729023947\n  },\n  \"luminousity\": {\n    \"value\": 401\n  }\n}",
+                        "device_type": "thl_sensor",
+                        "priority": "Low",
+                        "color": "dark",
+                        "background": "#FFD700",
+                        "tag": "Network Loss",
+                        "message": "Device hasn't communicated since\n\t\t\t  28 days"
+                    },
+                    {
+                        "device_name": "graylinx-ofc-01",
+                        "zone_name": "Hardware-Area",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "status": 0,
+                        "tag": "Gateway Error",
+                        "priority": "High",
+                        "color": "primary",
+                        "background": "rgb(157,46,48)",
+                        "message": "Gateway Not In Network",
+                        "device_type": "Gateway"
+                    }
+                ],
+                "batteryStatus": []
+            },
+            "solutionAlerts": {
+                "total_count": 4,
+                "alerts": [
+                    {
+                        "device_name": "Conf-THL-3",
+                        "device_type": "thl_sensor",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "5003015054cb7147",
+                        "created_at": "2021-08-05 10:04:53",
+                        "tag": "Limit crossed",
+                        "priority": "High",
+                        "color": "rgb(250,250,250,1)",
+                        "background": "rgb(245, 0, 87)",
+                        "message": "Humidity Limit crossed with \n\t\t\t   value 78.42 RH",
+                        "battery": 90
+                    },
+                    {
+                        "device_name": "Conf_THL",
+                        "device_type": "thl_sensor",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "500301502f4f5282",
+                        "created_at": "2021-07-09 13:10:23",
+                        "tag": "Limit crossed",
+                        "priority": "High",
+                        "color": "rgb(250,250,250,1)",
+                        "background": "rgb(245, 0, 87)",
+                        "message": "Humidity Limit crossed with \n\t\t\t   value 48.54 RH",
+                        "battery": 41.31887935871083
+                    },
+                    {
+                        "device_name": "conf-thl-2",
+                        "device_type": "thl_sensor",
+                        "zone_name": "Conference-Room",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50030150e4bf32c2",
+                        "created_at": "2021-07-09 13:10:23",
+                        "tag": "Limit crossed",
+                        "priority": "High",
+                        "color": "rgb(250,250,250,1)",
+                        "background": "rgb(245, 0, 87)",
+                        "message": "Humidity Limit crossed with \n\t\t\t   value 47.32 RH",
+                        "battery": 49.94036558308512
+                    },
+                    {
+                        "device_name": "CE0_thl",
+                        "device_type": "thl_sensor",
+                        "zone_name": "CEO-Cabin",
+                        "floor_name": "Floor-1",
+                        "building_name": "Moksha_mansion",
+                        "device_address": "50030150981f81fe",
+                        "created_at": "2021-07-09 13:10:23",
+                        "tag": "Limit crossed",
+                        "priority": "High",
+                        "color": "rgb(250,250,250,1)",
+                        "background": "rgb(245, 0, 87)",
+                        "message": "Humidity Limit crossed with \n\t\t\t   value 45.91 RH",
+                        "battery": 49.93494634651246
+                    }
+                ]
+            }
+        }
+    ],
+    "networkStatus": {
+        "name": "server",
+        "children": [
+            {
+                "name": "graylinx-ofc-02-Conference-Room",
+                "ip": "192.168.1.132",
+                "links": {
+                    "stroke": "blue",
+                    "strokeWidth": 3
+                },
+                "children": [
+                    {
+                        "name": "Conf-THL-3",
+                        "type": "thl_sensor",
+                        "mac": "5003015054cb7147",
+                        "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                        "created_at": "2021-08-05 10:04:53",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Conf_THL",
+                        "type": "thl_sensor",
+                        "mac": "500301502f4f5282",
+                        "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                        "created_at": "2021-07-09 13:10:23",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 28 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "conf_room-PIR-1",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150dd9cfa01",
+                        "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                        "created_at": "2021-08-05 09:36:38",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "conf-thl-2",
+                        "type": "thl_sensor",
+                        "mac": "50030150e4bf32c2",
+                        "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                        "created_at": "2021-07-09 13:10:23",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 28 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Conference_RO0M-DALI",
+                        "children": [
+                            {
+                                "name": "Slave-1",
+                                "type": "dali_slave",
+                                "mac": "50d1015ccf01f001",
+                                "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                                "created_at": "2021-08-05 10:00:37"
+                            },
+                            {
+                                "name": "Slave-2",
+                                "type": "dali_slave",
+                                "mac": "50d1015ccf01f002",
+                                "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                                "created_at": "2021-08-05 10:00:53"
+                            },
+                            {
+                                "name": "Slave-3",
+                                "type": "dali_slave",
+                                "mac": "50d1015ccf01f003",
+                                "zone_id": "36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                                "created_at": "2021-08-05 10:01:09"
+                            }
+                        ]
+                    }
+                ],
+                "attributes": {
+                    "Msg1": "Out of network!!"
+                },
+                "nodeSvgShape": {
+                    "shape": "circle",
+                    "shapeProps": {
+                        "r": 15,
+                        "fill": "red"
+                    }
+                }
+            },
+            {
+                "name": "graylinx-ofc-02-CEO-Cabin",
+                "ip": "192.168.1.132",
+                "children": [
+                    {
+                        "name": "Slave-4",
+                        "type": "dali_slave",
+                        "mac": "50d1015ccf01f004",
+                        "zone_id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                        "created_at": "2021-08-05 10:01:25"
+                    },
+                    {
+                        "name": "CE0_thl",
+                        "type": "thl_sensor",
+                        "mac": "50030150981f81fe",
+                        "zone_id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                        "created_at": "2021-07-09 13:10:23",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 28 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "CE0_Room_PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150de3149a6",
+                        "zone_id": "c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                        "created_at": "2021-08-05 09:39:22",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-02-Lab-2",
+                "ip": "192.168.1.132",
+                "children": [
+                    {
+                        "name": "Lab2-PIR-2",
+                        "type": "occupancy_sensor",
+                        "mac": "5001015038899620",
+                        "zone_id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                        "created_at": "2021-07-09 13:10:22",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 28 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "conf_room-PIR-2",
+                        "type": "occupancy_sensor",
+                        "mac": "500101503b70dc02",
+                        "zone_id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                        "created_at": "2021-08-05 09:38:59",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Lab-2-WAC",
+                        "type": "analog_controller",
+                        "mac": "50ac00000c7073e4",
+                        "zone_id": "5c578e7e-6fc5-4f5d-99bf-5c274353e17f",
+                        "created_at": "2021-08-05 10:03:38"
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Hardware-Area",
+                "ip": "192.168.1.131",
+                "links": {
+                    "stroke": "blue",
+                    "strokeWidth": 3
+                },
+                "children": [
+                    {
+                        "name": "E-meter",
+                        "type": "energy_meter",
+                        "mac": "5002000000000001",
+                        "zone_id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                        "created_at": "2021-07-09 13:10:23"
+                    },
+                    {
+                        "name": "SW-2-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "5001015049eec9a8",
+                        "zone_id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                        "created_at": "2021-08-05 10:06:26",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "SW-1-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150f0381c84",
+                        "zone_id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                        "created_at": "2021-08-05 10:05:32",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "AQS-1",
+                        "type": "AQS_sensor",
+                        "mac": "5004000000000001",
+                        "zone_id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                        "created_at": "2021-07-09 13:10:23"
+                    },
+                    {
+                        "name": "WORK_PLACE",
+                        "children": [
+                            {
+                                "name": "SW-Light-2",
+                                "type": "dali_slave",
+                                "mac": "50d10158ade72204",
+                                "zone_id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                                "created_at": "2021-08-05 10:01:29"
+                            },
+                            {
+                                "name": "SW-Light-1",
+                                "type": "dali_slave",
+                                "mac": "50d10158ade72203",
+                                "zone_id": "c8ff71bb-a991-4a99-b32e-b031286528b5",
+                                "created_at": "2021-08-05 10:01:13"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Software-Area",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "HW-2-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150e300e019",
+                        "zone_id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                        "created_at": "2021-08-05 09:58:17",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "HW-Light-1",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72209",
+                        "zone_id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                        "created_at": "2021-08-05 10:02:49"
+                    },
+                    {
+                        "name": "HW-Light-2",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade7220a",
+                        "zone_id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                        "created_at": "2021-08-05 10:03:05"
+                    },
+                    {
+                        "name": "HW-1-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150d4cd31a1",
+                        "zone_id": "448c4ad6-f255-4dd7-908c-153197806d3c",
+                        "created_at": "2021-08-05 10:04:44",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Firmware-Area",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "FW-1-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150c1dee522",
+                        "zone_id": "056dc128-151a-4883-bf69-c54e9936f7fd",
+                        "created_at": "2021-08-05 10:04:44",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "FW-Light-1",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72206",
+                        "zone_id": "056dc128-151a-4883-bf69-c54e9936f7fd",
+                        "created_at": "2021-08-05 10:02:01"
+                    },
+                    {
+                        "name": "FW-Light-2",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72205",
+                        "zone_id": "056dc128-151a-4883-bf69-c54e9936f7fd",
+                        "created_at": "2021-08-05 10:01:45"
+                    },
+                    {
+                        "name": "FW-2-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "500101508dca87c7",
+                        "zone_id": "056dc128-151a-4883-bf69-c54e9936f7fd",
+                        "created_at": "2021-08-05 09:57:34",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Passage_Area",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "PASSAGE-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150479545a8",
+                        "zone_id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                        "created_at": "2021-08-05 10:04:44",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Passage-2",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72207",
+                        "zone_id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                        "created_at": "2021-08-05 10:02:17"
+                    },
+                    {
+                        "name": "Passage-1",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72202",
+                        "zone_id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                        "created_at": "2021-08-05 10:00:57"
+                    },
+                    {
+                        "name": "Passage-3",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72208",
+                        "zone_id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                        "created_at": "2021-08-05 10:02:33"
+                    },
+                    {
+                        "name": "OFC_ENTRY-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "5001015091900040",
+                        "zone_id": "e8649999-d14a-4374-a925-4b99539d6f22",
+                        "created_at": "2021-08-05 10:05:26",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Lounge_Area",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "vandana-cabin-PIR",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150cbecb58f",
+                        "zone_id": "a1b9b462-531f-4c77-985b-654f4bc73b33",
+                        "created_at": "2021-08-05 09:59:52",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "v_cabin",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade7220b",
+                        "zone_id": "a1b9b462-531f-4c77-985b-654f4bc73b33",
+                        "created_at": "2021-08-05 10:03:21"
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Pantry",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "Pantry-1",
+                        "type": "analog_controller",
+                        "mac": "50ac00004f69091c",
+                        "zone_id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                        "created_at": "2021-08-05 10:04:44"
+                    },
+                    {
+                        "name": "Pantry_Pir",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150086dd9dd",
+                        "zone_id": "eef6294d-dbd9-449a-81ac-47f27b4a0a77",
+                        "created_at": "2021-08-05 10:04:44",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Lab-1",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "Lab-1-WAC",
+                        "type": "analog_controller",
+                        "mac": "50ac0000a5f938c8",
+                        "zone_id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                        "created_at": "2021-08-05 10:06:10"
+                    },
+                    {
+                        "name": "Lab1-PIR-1",
+                        "type": "occupancy_sensor",
+                        "mac": "50010150fe477368",
+                        "zone_id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                        "created_at": "2021-08-05 09:57:40",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Lab1-PIR-2",
+                        "type": "occupancy_sensor",
+                        "mac": "500101508ecffb7e",
+                        "zone_id": "77152a8a-1b00-4eb6-87bc-6a885cebacf5",
+                        "created_at": "2021-08-05 09:58:41",
+                        "attributes": {
+                            "Msg1": "Device hasn't communicated since 1 days"
+                        },
+                        "nodeSvgShape": {
+                            "shape": "circle",
+                            "shapeProps": {
+                                "r": 15,
+                                "fill": "red"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "graylinx-ofc-01-Vandana_Cabin",
+                "ip": "192.168.1.131",
+                "children": [
+                    {
+                        "name": "Lounge_LIGHT",
+                        "type": "dali_slave",
+                        "mac": "50d10158ade72201",
+                        "zone_id": "67787ba3-07db-4cc2-b53e-bcfc212b4fac",
+                        "created_at": "2021-08-05 10:00:40"
+                    }
+                ]
+            }
+        ]
+    },
+    "configuration": [
+        {
+            "id": "195e650a-9d85-49da-a5a9-b7dda03b089c",
+            "temperature": "{\"min\":\"0\",\"max\":\"35\"}",
+            "humidity": "{\"min\":\"100\",\"max\":\"200\"}",
+            "lux": "{\"min\":\"0\",\"max\":\"2000\"}",
+            "overparked": "{\"overParked\":\"3\"}",
+            "wastage": "{\"wastage\":\"30\"}",
+            "created_at": "2021-03-15 16:36:47",
+            "updated_at": "2021-03-23 12:18:28"
+        }
+    ],
+    "updated_at": "2021-08-06T11:17:02.337Z"
+}

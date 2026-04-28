@@ -1,0 +1,45 @@
+{
+  "danfoss_control_logic": {
+    "primary_variable_chiller": {
+      "start_with_chillers_count": 1,
+      "enabled_on_cpm": true,
+      "ch_header_temperature": 31,
+      "ch_setpoint": 7.3,
+      "delta_t": 4.5,
+      "CH_Motor_Percent_FLA": "par_percent_cooling_load_00",
+      "wc_chiller_cond_header_setpoint": "par_cdh_rt_temp_00",
+      "ui_wc_chiller_cond_header_setpoint": "par_chw_set_point_00",
+      "wc_chiller_temp_read_parameter": "par_chw_hd_ret_temp_00",
+      "wc_chiller_temp_set_parameter": "par_cwh_rt_temp_00",
+      "ui_wc_chiller_temp_set_parameter": "par_chw_set_point_00",
+      "conditions": {
+        "add_primary_variable_wc_chiller_system": {
+          "if_temp_greater_than": "ch_setpoint",
+          "duration_minutes": 15
+        },
+        "remove_chiller": {
+          "if": "ch_header_temperature - ch_setpoint * no_of_act_chillers/ no_of_act_chillers -1 <= delta_t",
+          "active_chillers_greater_than": 1
+        }
+      },
+      "disable_on_cpm_off": true
+    },
+
+    "cooling_tower": {
+      "monitor_condenser_temp": true,
+      "conditions": {
+        "turn_off_fans": {
+          "if_temp_less_than": 2,
+          "delayed_duration_minutes": 10
+        },
+        "turn_on_fans": {
+          "if_temp_greater_than": 0.5,
+          "scope": "all_fans_of_active_cooling_towers"
+        }
+      },
+      "notes": {
+        "pid_control": "DDC include PID loop for cooling tower fan speed with configurable setpoint"
+      }
+    }
+  }
+}

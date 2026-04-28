@@ -1,0 +1,1 @@
+{"time":"2022-05-27T06:45:20.051Z","data":{"address":"172.16.16.2","deviceId":146888,"maxApdu":600,"segmentation":3,"vendorId":1007}}

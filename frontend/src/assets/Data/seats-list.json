@@ -1,0 +1,863 @@
+{
+    "name": "my-map",
+    "areas": [
+        {
+            "name": "S-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [265,82,252,60],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [274,84,266,62],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [252,84,263,100],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [275,100,263,85],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [254,120,264,107],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [273,119,263,104],
+            "preFillColor": "green"                                      
+            
+        },
+		{
+            "name": "S-7",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [263,141,253,125],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-8",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [272,138,265,126],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "S-9",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [259,25,268,40],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [303,21,311,32],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [314,19,324,34],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [312,56,301,40],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [314,39,322,51],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [304,60,312,74],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [314,61,323,71],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-7",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [302,79,310,92],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-8",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [312,77,322,92],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-9",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [303,97,312,111],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-10",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [313,98,324,112],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-11",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [300,118,311,132],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "T-12",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [314,118,321,132],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [349,18,359,32],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [350,38,362,51],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [350,57,361,72],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [364,57,372,73],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [351,79,361,92],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [362,78,372,94],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-7",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-8",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [363,98,373,112],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-9",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [351,118,360,131],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "U-10",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [364,119,370,132],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "V-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [401,20,410,32],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "V-2",
+                "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+                "shape": "rect",
+                "coords": [411,21,422,33],
+                "preFillColor": "green"
+                
+        },
+        {
+		"name": "V-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [400,40,409,52],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [410,37,422,52],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [398,58,410,71],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [411,57,422,72],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-7",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [399,79,409,92],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-8",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [410,80,421,92],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-9",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [397,99,410,112],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-10",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [410,97,422,112],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-11",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [401,119,409,134],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "V-12",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [410,118,420,132],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [449,19,458,33],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [460,19,471,33],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [450,40,459,53],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [460,39,469,52],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [450,58,458,72],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [461,58,468,73],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-7",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [449,78,459,92],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-8",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [460,80,469,92],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-9",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [449,99,457,111],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-10",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [458,99,468,112],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-11",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [450,118,458,134],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "W-12",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [460,119,470,132],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [499,24,508,39],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [507,58,499,44],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [499,64,506,77],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [511,64,520,78],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [499,86,509,100],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [509,85,520,99],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-7",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [498,105,507,119],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-8",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [508,104,519,118],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-9",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [499,124,509,138],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "X-10",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [509,124,519,137],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "Y-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [546,67,557,78],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "Y-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [549,84,557,97],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "Y-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [547,102,558,118],
+            "preFillColor": "green"
+            
+        },
+        {
+		"name": "Y-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [549,125,557,138],
+            "preFillColor": "green"
+            
+        },
+		{
+            "name": "A-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [93,166,104,187],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "A-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [94,186,104,207],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "A-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [95,206,103,224],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "A-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [104,166,114,186],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "A-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [103,186,113,204],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "A-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [104,205,113,225],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "B-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [142,166,151,187],
+            "preFillColor": "green"
+            
+        },
+         {
+            "name": "B-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [142,186,151,207],
+            "preFillColor": "green"
+            
+        },
+         {
+            "name": "B-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [141,206,152,226],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "C-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [175,165,184,185],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "C-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [174,186,184,206],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "C-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [174,207,185,226],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "D-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [213,185,223,206],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "D-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [214,207,224,225],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "D-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [224,167,233,186],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "D-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [225,187,233,205],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "D-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [223,205,233,224],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "E-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [262,165,271,185],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "E-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [262,186,271,205],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "E-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [262,206,272,227],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "F-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [57,167,66,187],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "F-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [56,185,67,205],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "F-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [57,206,66,226],
+            "preFillColor": "green"
+            
+        },
+        
+        {
+            "name": "G-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [91,257,112,265],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "G-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [109,256,133,265],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "G-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [134,256,152,265],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "H-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [91,299,112,309],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "H-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [113,299,131,308],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "H-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [132,300,152,310],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "H-4",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [93,311,111,318],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "H-5",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [112,308,132,320],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "H-6",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [133,310,152,320],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "I-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [91,351,112,360],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "I-2",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [113,350,132,359],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "I-3",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [132,351,153,359],
+            "preFillColor": "green"
+            
+        },
+       
+        {
+            "name": "J-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [18,206,38,215],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "K-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [78,325,90,336],
+            "preFillColor": "green"
+            
+        },
+        {
+            "name": "L-1",
+            "zone_id": "18f094dd-e9ea-4c22-9c65-0d2c956cbbfb",
+            "shape": "rect",
+            "coords": [43,314,52,334],
+            "preFillColor": "green"
+            
+        }
+		   ]
+}

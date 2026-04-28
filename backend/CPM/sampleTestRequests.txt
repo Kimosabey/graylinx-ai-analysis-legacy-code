@@ -1,0 +1,137 @@
+curl --header "Content-Type: application/json" -d "{\"noid\":\"ec703a94-9e61-11ee-baaa-0a3ce5ae2e08\"}" -k https://localhost:8443/v1/newapis/mycpmnotify
+# Start a CPM Scenario
+curl --header "Content-Type: application/json" -d "{\"noid\":\"ec703a94-9e61-11ee-baaa-0a3ce5ae2e08\", \"startCPMScenario\":\"START_CHILLER_PLANT\"}" -k https://localhost:8443/v1/newapis/mycpmnotify
+
+curl --header "Content-Type: application/json" -d "{\"priorityEquipmentFault\":\"START_CHILLER_PLANT\"}" -k https://localhost:8443/v1/newapis/mycpmnotify
+curl --header "Content-Type: application/json" -d "{\"noid\":\"ec703a94-9e61-11ee-baaa-0a3ce5ae2e08\", \"startCPMScenario\":\"START_CHILLER_SYSTEM\"}" -k https://localhost:8443/v1/newapis/mycpmnotify
+
+curl --header "Content-Type: application/json" -d "{\"noid\":\"ec703a94-9e61-11ee-baaa-0a3ce5ae2e08\", \"startCPMScenario\":\"STOP_CHILLER_SYSTEM\"}" -k https://localhost:8443/v1/newapis/mycpmnotify
+
+# Trying to start Scenario not defined
+curl --header "Content-Type: application/json" -d "{\"noid\":\"ec703a94-9e61-11ee-baaa-0a3ce5ae2e08\", \"startCPMScenario\":\"New_Scenario\"}" -k https://localhost:8443/v1/newapis/mycpmnotify
+
+# Sending post with data in a file
+curl -i -X POST --header "Content-Type: application/json" -k https://localhost:8443/v1/newapis/mycpmnotify -d "@mydata.json"
+curl --header "Content-Type: application/json" -k https://localhost:8443/v1/newapis/mycpmnotify -d "@mydata.json"
+curl --header "Content-Type: application/json" -k https://localhost:8443/v1/newapis/mynotify -d "@mydata.json"
+curl --header "Content-Type: application/json" -k https://localhost:8443/v1/newapis/mynotify -d "{}"
+
+		"START_CHILLER_SYSTEM": {
+			"SCENARIO_STARTED": {
+				"success": {"forward": "FIND_CHILLER_TO_TURN_ON_SUCCESS", "retry": "SCENARIO_ABORTED"},
+				"failure": {"forward": "SCENARIO_ABORTED", "retry": "SCENARIO_ABORTED"}
+			},
+			"FIND_CHILLER_TO_TURN_ON_SUCCESS": {
+				"success": {"forward": "FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS", "retry": "VALVE_TURN_ON_REQUESTED"},
+				"failure": {"forward": "EQUIPMENT_NOT_AVAILABLE", "retry": "EQUIPMENT_NOT_AVAILABLE"}
+			},
+			"FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS": {
+				"success": {"forward": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS", "retry": ""},
+				"failure": {"forward": "EQUIPMENT_NOT_AVAILABLE", "retry": "EQUIPMENT_NOT_AVAILABLE"}
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS": {
+				"success": {"forward": "VALVE_TURN_ON_REQUESTED", "retry": "PRIMARY_PUMP_TURN_ON_REQUESTED"},
+				"failure": {"forward": "EQUIPMENT_NOT_AVAILABLE", "retry": "EQUIPMENT_NOT_AVAILABLE"}
+			},
+			"VALVE_TURN_ON_REQUESTED": {
+				"success": {"forward": "VALVE_TURNED_ON", "retry": "VALVE_TURNED_ON"},
+				"failure": {"forward": "FIND_CHILLER_TO_TURN_ON_SUCCESS", "retry": "FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS"}
+			},
+			"VALVE_TURNED_ON": {
+				"success": {"forward": "PRIMARY_PUMP_TURN_ON_REQUESTED", "retry": "SCENARIO_RECOVERED"},
+				"failure": {"forward": "VALVE_TURN_OFF_REQUESTED", "retry": "FIND_CHILLER_TO_TURN_ON_SUCCESS"}
+			},
+			"SCENARIO_RECOVERED": {
+				"success": {"forward": "", "retry": ""},
+				"failure": {"forward": "", "retry": ""}
+			},
+			"VALVE_TURN_OFF_REQUESTED": {
+				"success": {"forward": "VALVE_TURNED_OFF", "retry": "VALVE_TURNED_OFF"},
+				"failure": {"forward": "EQUIPMENT_FAULTY", "retry": ""}
+			},
+			"VALVE_TURNED_OFF": {
+				"success": {"forward": "PRIMARY_PUMP_TURN_ON_REQUESTED", "retry": "FIND_CHILLER_TO_TURN_ON_SUCCESS"},
+				"failure": {"forward": "", "retry": "FIND_CHILLER_TO_TURN_ON_SUCCESS"}
+			},
+			"PRIMARY_PUMP_TURN_ON_REQUESTED": {
+				"success": {"forward": "PRIMARY_PUMP_TURNED_ON", "retry": "PRIMARY_PUMP_TURNED_ON"},
+				"failure": {"forward": "PRIMARY_PUMP_TURN_OFF_REQUESTED", "retry": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS"}
+			},
+			"PRIMARY_PUMP_TURNED_ON": {
+				"success": {"forward": "CONDENSER_PUMP_TURN_ON_REQUESTED", "retry": ""},
+				"failure": {"forward": "EQUIPMENT_FAULTY", "retry": ""}
+			},
+			"CONDENSER_PUMP_TURN_ON_REQUESTED": {
+				"success": {"forward": "CONDENSER_PUMP_TURNED_ON", "retry": ""},
+				"failure": {"forward": "EQUIPMENT_FAULTY", "retry": ""}
+			},
+			"CONDENSER_PUMP_TURNED_ON": {
+				"success": {"forward": "CHILLER_TURN_ON_REQUESTED", "retry": ""},
+				"failure": {"forward": "EQUIPMENT_FAULTY", "retry": ""}
+			},
+			"CHILLER_TURN_ON_REQUESTED": {
+				"success": {"forward": "CHILLER_TURNED_ON", "retry": ""},
+				"failure": {"forward": "EQUIPMENT_FAULTY", "retry": ""}
+			},
+			"CHILLER_TURNED_ON": {
+				"success": {"forward": "SCENARIO_COMPLETED", "retry": ""},
+				"failure": {"forward": "", "retry": ""}
+			},
+			"EQUIPMENT_FAULTY": {},
+			"EQUIPMENT_NOT_AVAILABLE": {
+				"success": {"forward": "SCENARIO_ABORTED", "retry": ""},
+				"failure": {"forward": "", "retry": ""}
+			}
+		},
+		
+SCENARIO_STARTED
+SCENARIO_RECOVERED
+SCENARIO_ABORTED
+EQUIPMENT_NOT_AVAILABLE
+SCENARIO_COMPLETED
+FIND_CHILLER_TO_TURN_ON_SUCCESS
+FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS
+FIND_PRIMARY_VARIABLE_PUMP_TO_TURN_ON_SUCCESS
+FIND_SECONDARY_PUMP_TO_TURN_ON_SUCCESS
+FIND_CONDENSER_PUMP_TO_TURN_ON_SUCCESS
+FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS
+FIND_CT_FAN_TO_TURN_ON_SUCCESS
+FIND_CT_VARIABLE_FAN_TO_TURN_ON_SUCCESS
+FIND_HEADER_TO_TURN_ON_SUCCESS
+CHILLER_TURN_ON_REQUESTED
+PRIMARY_PUMP_TURN_ON_REQUESTED
+PRIMARY_VARIABLE_PUMP_TURN_ON_REQUESTED
+SECONDARY_PUMP_TURN_ON_REQUESTED
+CONDENSER_PUMP_TURN_ON_REQUESTED
+COOLING_TOWER_TURN_ON_REQUESTED
+CT_FAN_TURN_ON_REQUESTED
+CT_VARIABLE_FAN_TURN_ON_REQUESTED
+HEADER_TURN_ON_REQUESTED
+CHILLER_TURN_OFF_REQUESTED
+PRIMARY_PUMP_TURN_OFF_REQUESTED
+PRIMARY_VARIABLE_PUMP_TURN_OFF_REQUESTED
+SECONDARY_PUMP_TURN_OFF_REQUESTED
+CONDENSER_PUMP_TURN_OFF_REQUESTED
+COOLING_TOWER_TURN_OFF_REQUESTED
+CT_FAN_TURN_OFF_REQUESTED
+CT_VARIABLE_FAN_TURN_OFF_REQUESTED
+HEADER_TURN_OFF_REQUESTED
+CHILLER_TURNED_ON
+PRIMARY_PUMP_TURNED_ON
+PRIMARY_VARIABLE_PUMP_TURNED_ON
+SECONDARY_PUMP_TURNED_ON
+CONDENSER_PUMP_TURNED_ON
+COOLING_TOWER_TURNED_ON
+CT_FAN_TURNED_ON
+CT_VARIABLE_FAN_TURNED_ON
+HEADER_TURNED_ON
+CHILLER_TURNED_OFF
+PRIMARY_PUMP_TURNED_OFF
+PRIMARY_VARIABLE_PUMP_TURNED_OFF
+SECONDARY_PUMP_TURNED_OFF
+CONDENSER_PUMP_TURNED_OFF
+COOLING_TOWER_TURNED_OFF
+CT_FAN_TURNED_OFF
+CT_VARIABLE_FAN_TURNED_OFF
+HEADER_TURNED_OFF
+

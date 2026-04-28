@@ -1,0 +1,183 @@
+{
+  "project_id": "GL_CHILLER_PLANT",
+  "bucket_minutes": 5,
+
+  "data_sources": {
+    "_comment": "ALL table names and param IDs live here — change only this section to adapt to a new site.",
+
+    "CH1_comp01_power": { "table": "ch_0001b00000_om_p",  "param_id": "par_comp_avg_power_01", "type": "raw",    "agg": "AVG" },
+    "CH1_comp02_power": { "table": "ch_0001b00000_om_p",  "param_id": "par_comp_avg_power_02", "type": "raw",    "agg": "AVG" },
+    "CH1_comp01_on":    { "table": "ch_0001b00000_om_p",  "param_id": "par_comp_on_off_01",    "type": "raw",    "agg": "MAX" },
+    "CH1_comp02_on":    { "table": "ch_0001b00000_om_p",  "param_id": "par_comp_on_off_02",    "type": "raw",    "agg": "MAX" },
+    "CH1_tr":           { "table": "ch_0001b00000_metric", "param_id": "TR",                   "type": "metric", "agg": "AVG" },
+    "CH1_chw_entering": { "table": "ch_0001b00000_om_p",  "param_id": "par_evap_entering_temp_00","type": "raw", "agg": "AVG" },
+    "CH1_chw_leaving":  { "table": "ch_0001b00000_om_p",  "param_id": "sts_evap_leaving_temp_00", "type": "raw", "agg": "AVG" },
+    "CH1_flow":         { "table": "ch_0001b00000_om_p",  "param_id": "par_dpt_00",            "type": "raw",    "agg": "AVG" },
+
+    "CH2_comp01_power": { "table": "ch_0002b00000_om_p",  "param_id": "par_comp_avg_power_01", "type": "raw",    "agg": "AVG" },
+    "CH2_comp02_power": { "table": "ch_0002b00000_om_p",  "param_id": "par_comp_avg_power_02", "type": "raw",    "agg": "AVG" },
+    "CH2_comp01_on":    { "table": "ch_0002b00000_om_p",  "param_id": "par_comp_on_off_01",    "type": "raw",    "agg": "MAX" },
+    "CH2_comp02_on":    { "table": "ch_0002b00000_om_p",  "param_id": "par_comp_on_off_02",    "type": "raw",    "agg": "MAX" },
+    "CH2_tr":           { "table": "ch_0002b00000_metric", "param_id": "TR",                   "type": "metric", "agg": "AVG" },
+    "CH2_chw_entering": { "table": "ch_0002b00000_om_p",  "param_id": "par_evap_entering_temp_00","type": "raw", "agg": "AVG" },
+    "CH2_chw_leaving":  { "table": "ch_0002b00000_om_p",  "param_id": "sts_evap_leaving_temp_00", "type": "raw", "agg": "AVG" },
+    "CH2_flow":         { "table": "ch_0002b00000_om_p",  "param_id": "par_dpt_00",            "type": "raw",    "agg": "AVG" },
+
+    "CH3_comp01_power": { "table": "ch_0003b00000_om_p",  "param_id": "par_comp_avg_power_01", "type": "raw",    "agg": "AVG" },
+    "CH3_comp02_power": { "table": "ch_0003b00000_om_p",  "param_id": "par_comp_avg_power_02", "type": "raw",    "agg": "AVG" },
+    "CH3_comp01_on":    { "table": "ch_0003b00000_om_p",  "param_id": "par_comp_on_off_01",    "type": "raw",    "agg": "MAX" },
+    "CH3_comp02_on":    { "table": "ch_0003b00000_om_p",  "param_id": "par_comp_on_off_02",    "type": "raw",    "agg": "MAX" },
+    "CH3_tr":           { "table": "ch_0003b00000_metric", "param_id": "TR",                   "type": "metric", "agg": "AVG" },
+    "CH3_chw_entering": { "table": "ch_0003b00000_om_p",  "param_id": "par_evap_entering_temp_00","type": "raw", "agg": "AVG" },
+    "CH3_chw_leaving":  { "table": "ch_0003b00000_om_p",  "param_id": "sts_evap_leaving_temp_00", "type": "raw", "agg": "AVG" },
+    "CH3_flow":         { "table": "ch_0003b00000_om_p",  "param_id": "par_dpt_00",            "type": "raw",    "agg": "AVG" },
+
+    "PV1_power":        { "table": "pu_0001b10000_om_p",  "param_id": "par_pump_avg_power_00", "type": "raw",    "agg": "AVG" },
+    "PV1_on":           { "table": "pu_0001b10000_om_p",  "param_id": "sts_on_off_00",         "type": "raw",    "agg": "MAX" },
+    "PV2_power":        { "table": "pu_0002b10000_om_p",  "param_id": "par_pump_avg_power_00", "type": "raw",    "agg": "AVG" },
+    "PV2_on":           { "table": "pu_0002b10000_om_p",  "param_id": "sts_on_off_00",         "type": "raw",    "agg": "MAX" },
+    "PV3_power":        { "table": "pu_0003b10000_om_p",  "param_id": "par_pump_avg_power_00", "type": "raw",    "agg": "AVG" },
+    "PV3_on":           { "table": "pu_0003b10000_om_p",  "param_id": "sts_on_off_00",         "type": "raw",    "agg": "MAX" },
+
+    "CP01_power":       { "table": "em_0001000000_om_p",  "param_id": "par_avg_active_power_00","type": "raw",   "agg": "AVG" },
+    "CP01_on":          { "table": "condpu_0001b40000_om_p","param_id": "sts_on_off_00",        "type": "raw",    "agg": "MAX" },
+    "CP02_power":       { "table": "em_0002000000_om_p",  "param_id": "par_avg_active_power_00","type": "raw",   "agg": "AVG" },
+    "CP02_on":          { "table": "condpu_0002b40000_om_p","param_id": "sts_on_off_00",        "type": "raw",    "agg": "MAX" },
+    "CP03_power":       { "table": "em_0003000000_om_p",  "param_id": "par_avg_active_power_00","type": "raw",   "agg": "AVG" },
+    "CP03_on":          { "table": "condpu_0003b40000_om_p","param_id": "sts_on_off_00",        "type": "raw",    "agg": "MAX" }
+  },
+
+  "calculations": [
+    {
+      "id":      "CH1_total_kw",
+      "label":   "Chiller 1 – Total kW (gated per compressor)",
+      "formula": "GATED_SUM",
+      "inputs":  {
+        "power": ["CH1_comp01_power", "CH1_comp02_power"],
+        "gates": ["CH1_comp01_on",   "CH1_comp02_on"]
+      },
+      "output":  { "table": "ch_0001b00000_metric", "ss_id": "ch_0001b00000", "metric_id": "Total_kW" }
+    },
+    {
+      "id":      "CH1_kw_per_tr",
+      "label":   "Chiller 1 – kW / TR",
+      "formula": "RATIO",
+      "inputs":  { "numerator": "CH1_total_kw", "denominator": "CH1_tr" },
+      "output":  { "table": "ch_0001b00000_metric", "ss_id": "ch_0001b00000", "metric_id": "kW_per_TR" }
+    },
+    {
+      "id":      "CH1_chw_delta_t",
+      "label":   "Chiller 1 – CHW Delta T",
+      "formula": "DELTA",
+      "inputs":  { "a": "CH1_chw_entering", "b": "CH1_chw_leaving" },
+      "output":  { "table": "ch_0001b00000_metric", "ss_id": "ch_0001b00000", "metric_id": "CHW_Delta_T" }
+    },
+
+    {
+      "id":      "CH2_total_kw",
+      "label":   "Chiller 2 – Total kW (gated)",
+      "formula": "GATED_SUM",
+      "inputs":  {
+        "power": ["CH2_comp01_power", "CH2_comp02_power"],
+        "gates": ["CH2_comp01_on",   "CH2_comp02_on"]
+      },
+      "output":  { "table": "ch_0002b00000_metric", "ss_id": "ch_0002b00000", "metric_id": "Total_kW" }
+    },
+    {
+      "id":      "CH2_kw_per_tr",
+      "label":   "Chiller 2 – kW / TR",
+      "formula": "RATIO",
+      "inputs":  { "numerator": "CH2_total_kw", "denominator": "CH2_tr" },
+      "output":  { "table": "ch_0002b00000_metric", "ss_id": "ch_0002b00000", "metric_id": "kW_per_TR" }
+    },
+    {
+      "id":      "CH2_chw_delta_t",
+      "label":   "Chiller 2 – CHW Delta T",
+      "formula": "DELTA",
+      "inputs":  { "a": "CH2_chw_entering", "b": "CH2_chw_leaving" },
+      "output":  { "table": "ch_0002b00000_metric", "ss_id": "ch_0002b00000", "metric_id": "CHW_Delta_T" }
+    },
+
+    {
+      "id":      "CH3_total_kw",
+      "label":   "Chiller 3 – Total kW (gated)",
+      "formula": "GATED_SUM",
+      "inputs":  {
+        "power": ["CH3_comp01_power", "CH3_comp02_power"],
+        "gates": ["CH3_comp01_on",   "CH3_comp02_on"]
+      },
+      "output":  { "table": "ch_0003b00000_metric", "ss_id": "ch_0003b00000", "metric_id": "Total_kW" }
+    },
+    {
+      "id":      "CH3_kw_per_tr",
+      "label":   "Chiller 3 – kW / TR",
+      "formula": "RATIO",
+      "inputs":  { "numerator": "CH3_total_kw", "denominator": "CH3_tr" },
+      "output":  { "table": "ch_0003b00000_metric", "ss_id": "ch_0003b00000", "metric_id": "kW_per_TR" }
+    },
+    {
+      "id":      "CH3_chw_delta_t",
+      "label":   "Chiller 3 – CHW Delta T",
+      "formula": "DELTA",
+      "inputs":  { "a": "CH3_chw_entering", "b": "CH3_chw_leaving" },
+      "output":  { "table": "ch_0003b00000_metric", "ss_id": "ch_0003b00000", "metric_id": "CHW_Delta_T" }
+    },
+
+    {
+      "id":      "plant_total_chiller_kw",
+      "label":   "Plant – Total Chiller kW",
+      "formula": "SUM",
+      "inputs":  { "sources": ["CH1_total_kw", "CH2_total_kw", "CH3_total_kw"] },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_Total_Chiller_kW" }
+    },
+    {
+      "id":      "plant_total_tr",
+      "label":   "Plant – Total TR",
+      "formula": "SUM",
+      "inputs":  { "sources": ["CH1_tr", "CH2_tr", "CH3_tr"] },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_Total_TR" }
+    },
+    {
+      "id":      "plant_chiller_spc",
+      "label":   "Plant – Chiller SPC (kW/TR)",
+      "formula": "RATIO",
+      "inputs":  { "numerator": "plant_total_chiller_kw", "denominator": "plant_total_tr" },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_Chiller_SPC" }
+    },
+
+    {
+      "id":      "plant_total_pump_kw",
+      "label":   "Plant – Total Primary Pump kW (gated)",
+      "formula": "GATED_SUM",
+      "inputs":  {
+        "power": ["PV1_power", "PV2_power", "PV3_power"],
+        "gates": ["PV1_on",   "PV2_on",   "PV3_on"]
+      },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_Total_Pump_kW" }
+    },
+    {
+      "id":      "plant_total_cdw_pump_kw",
+      "label":   "Plant – Total Condenser Pump kW (gated)",
+      "formula": "GATED_SUM",
+      "inputs":  {
+        "power": ["CP01_power", "CP02_power", "CP03_power"],
+        "gates": ["CP01_on",   "CP02_on",   "CP03_on"]
+      },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_Total_CDW_Pump_kW" }
+    },
+    {
+      "id":      "plant_total_kw",
+      "label":   "Plant – Total Plant Room kW",
+      "formula": "SUM",
+      "inputs":  { "sources": ["plant_total_chiller_kw", "plant_total_pump_kw", "plant_total_cdw_pump_kw"] },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_Total_kW" }
+    },
+    {
+      "id":      "plant_spc",
+      "label":   "Plant – Overall SPC (kW/TR)",
+      "formula": "RATIO",
+      "inputs":  { "numerator": "plant_total_kw", "denominator": "plant_total_tr" },
+      "output":  { "table": "cpm_0001bc0000_metric", "ss_id": "cpm_0001bc0000", "metric_id": "Plant_SPC" }
+    }
+  ]
+}

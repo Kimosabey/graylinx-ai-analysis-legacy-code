@@ -1,0 +1,25 @@
+.rbc-current-time-indicator
+  position: absolute
+  z-index: 1
+  left: 0
+  height: 1px
+  background-color: #74ad31
+  pointer-events: none
+  &::before
+    display: block
+    position: absolute
+    left: -3px
+    top: -3px
+    content: ' '
+    background-color: #74ad31
+    border-radius: 50%
+    width: 8px
+    height: 8px
+
+.rbc-rtl .rbc-current-time-indicator::before
+  left: 0
+  right: -3px
+
+.rbc-allday-cell 
+  display: none !important;
+ 

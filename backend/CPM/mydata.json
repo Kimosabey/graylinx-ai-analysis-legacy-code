@@ -1,0 +1,21 @@
+{
+"myuuid": "85a0005c-9488-43d1-8a10-81e3198fa529",
+"measured_time": "2024-02-12 16:51:01.048105",
+"156:0x000000000003": {
+  "GL 00 00 00 00 B0 0 005": ["CH_Vlv_SS",1,"analogValue:10001"],
+  "GL 00 00 00 00 B0 0 003": ["CHW_Flow_SS",1,"analogValue:10001"],
+  "GL 00 00 00 00 B0 0 008": ["CHW_Flow_SS",1,"analogValue:10001"],
+  "GL 00 00 00 00 B0 0 007":["CH_Out_Vlv_On_Off_SS",1,"analogValue:10001"],
+  "GL 00 00 00 00 B0 0 001":["CH_SS",1,"analogValue:10001"],
+  "GL 00 00 00 00 B1 0 002": ["Pri_Pmp_On/Off_SS",1,"analogValue:10001"]
+},
+"156:0x000000000004": {
+  "GL 00 00 00 00 B1 0 002": ["Pri_Pmp_On/Off_SS",1,"analogValue:10001"]
+},
+"156:0x000000000005": {
+  "GL 00 00 00 00 B2 0 001": ["Sec_Pmp_On/Off_SS",1,"analogValue:10001"]
+},
+"192.168.0.129:2610": {
+	"GL 00 00 ca B0 0 000": ["CH_On_Off",1,"binaryValue:10001"]
+}
+}

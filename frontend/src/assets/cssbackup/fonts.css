@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'BwSeidoRound-Regular';
+    src: local('BwSeidoRound-Regular'),
+         url('../../fonts/BwSeidoRound-Regular.woff') format('woff'),
+         url('../../fonts/BwSeidoRound-Regular.woff2') format('woff2'),
+         url('../../fonts/BwSeidoRound-Regular.otf') format('opentype'),
+         url('../../fonts/BwSeidoRound-Regular.eot') format('eot');
+}
+@font-face {
+    font-family: 'BwSeidoRound-Regular';
+    src: local('BwSeidoRound-Regular'),
+         url('../../fonts/BwSeidoRound-Regular.woff') format('woff'),
+         url('../../fonts/BwSeidoRound-Regular.woff2') format('woff2'),
+         url('../../fonts/BwSeidoRound-Regular.otf') format('opentype');
+}

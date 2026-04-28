@@ -1,0 +1,2656 @@
+{
+	"Active_Scenario": {
+		"Working_Scenario_Type": "START_CHILLER_PLANT",
+		"Working_Scenario_Id": "scenario_uuid",
+		"Scenario_Previous_State": "SCENARIO_STARTED",
+		"Scenario_Current_State": "VALVE_TURN_ON_REQUESTED",
+		"State_Change_Timestamp": "<TIME_STAMP>",
+		"Working_On_Equipment": {
+			"NONGL_SS_CHILLER": "",
+			"NONGL_SS_PUMPS": "",
+			"NONGL_SS_PRIMARY_VARIABLE_PUMP": "",
+			"NONGL_SS_SECONDARY_PUMPS": "",
+			"NONGL_SS_CONDENSER_PUMPS": "",
+			"NONGL_SS_COOLING_TOWER": "",
+			"NONGL_SS_COOLING_TOWER_FAN": "",
+			"NONGL_SS_CT_VARIABLE_FAN": "",
+			"NONGL_SS_HEADER": ""
+		}
+	},
+	"CPM_Scenario_Flow": {
+		"START_CHILLER_PLANT": {
+			"SCENARIO_STARTED": {
+				"success": "SET_VALIDATE_PROCESS_PARAMS_ON",
+				"failure": "",
+				"retry": ""
+			},
+			"SET_VALIDATE_PROCESS_PARAMS_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "SCENARIO_ABORTED",
+				"retry": ""
+			}
+		},
+		"START_WATER_COOLED_CHILLER_SYSTEM": {
+			"SCENARIO_STARTED": {
+				"success": "FIND_CHILLER_TO_TURN_ON_SUCCESS",
+				"failure": "SCENARIO_ABORTED",
+				"handleFailure": ""
+			},
+			"FIND_CHILLER_TO_TURN_ON_SUCCESS": {
+				"success": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED"
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS": {
+				"success": "FIND_CONDENSER_PUMP_TO_TURN_ON_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "PRIMARY_PUMP_TURN_ON_REQUESTED"
+			},
+			"FIND_CONDENSER_PUMP_TO_TURN_ON_SUCCESS": {
+				"success": "FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "CONDENSER_PUMP_TURN_ON_REQUESTED"
+			},
+			"FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS": {
+				"success": "FIND_SECONDARY_PUMP_TO_TURN_ON_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "COOLING_TOWER_VALVE_TURN_ON_REQUESTED"
+			},
+			"FIND_SECONDARY_PUMP_TO_TURN_ON_SUCCESS": {
+				"success": "CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "SECONDARY_PUMP_TURN_ON_REQUESTED"
+			},		
+			"CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED": {
+				"success": "CHILLER_OUTLET_VALVE_TURNED_ON",
+				"failure": "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_ON": {
+				"success": "CONDENSER_VALVE_TURN_ON_REQUESTED",
+				"failure": "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},			
+			"CONDENSER_VALVE_TURN_ON_REQUESTED": {
+				"success": "CONDENSER_VALVE_TURNED_ON",
+				"failure": "CONDENSER_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CONDENSER_VALVE_TURNED_ON": {
+				"success": "PRIMARY_PUMP_TURN_ON_REQUESTED",
+				"failure": "CONDENSER_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},		
+			"PRIMARY_PUMP_TURN_ON_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_ON",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"PRIMARY_PUMP_TURNED_ON": {
+				"success": "COOLING_TOWER_VALVE_TURN_ON_REQUESTED",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},		
+			"CHECK_CHILLER_WATER_FLOW_STATUS":{
+				"success": "COOLING_TOWER_VALVE_TURN_ON_REQUESTED",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},		
+			"COOLING_TOWER_VALVE_TURN_ON_REQUESTED": {
+				"success": "COOLING_TOWER_VALVE_TURNED_ON",
+				"failure": "COOLING_TOWER_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"COOLING_TOWER_VALVE_TURNED_ON": {
+				"success": "CONDENSER_PUMP_TURN_ON_REQUESTED",
+				"failure": "COOLING_TOWER_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},		
+			"CONDENSER_PUMP_TURN_ON_REQUESTED": {
+				"success": "CONDENSER_PUMP_TURNED_ON",
+				"failure": "CONDENSER_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CONDENSER_PUMP_TURNED_ON": {
+				"success": "CHILLER_TURN_ON_REQUESTED",
+				"failure": "CONDENSER_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},	
+			"CHECK_CONDENSER_WATER_FLOW_STATUS":{
+				"success": "CHILLER_TURN_ON_REQUESTED",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CHILLER_TURN_ON_REQUESTED": {
+				"success": "CHILLER_TURNED_ON",
+				"failure": "CHILLER_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CHILLER_TURNED_ON": {
+				"success": "SECONDARY_PUMP_TURN_ON_REQUESTED",
+				"failure": "CHILLER_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"SECONDARY_PUMP_TURN_ON_REQUESTED": {
+				"success": "SECONDARY_PUMP_TURNED_ON",
+				"failure": "SECONDARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"SECONDARY_PUMP_TURNED_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "SECONDARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			},
+			"EQUIPMENT_NOT_AVAILABLE": {
+				"success": "SCENARIO_ABORTED",
+				"failure": "",
+				"handleFailure": "SCENARIO_ABORTED"
+			},
+			"CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CHILLER_OUTLET_VALVE_TURNED_OFF"
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_CHILLER_TO_TURN_ON_SUCCESS"
+			},
+			"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "PRIMARY_PUMP_TURNED_OFF"
+			},
+			"PRIMARY_PUMP_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS"
+			},
+			"CONDENSER_VALVE_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CONDENSER_PUMP_TURNED_OFF"
+			},
+			"CONDENSER_VALVE_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_CHILLER_TO_TURN_ON_SUCCESS"
+			},
+			"CONDENSER_PUMP_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CONDENSER_PUMP_TURNED_OFF"
+			},
+			"CONDENSER_PUMP_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_CONDENSER_PUMP_TO_TURN_ON_SUCCESS"
+			},
+			"COOLING_TOWER_VALVE_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "COOLING_TOWER_VALVE_TURNED_OFF"
+			},
+			"COOLING_TOWER_VALVE_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS"
+			},
+			"CHILLER_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CHILLER_TURNED_OFF"
+			},
+			"CHILLER_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_ALTERNATE_CHILLER_TO_TURN_ON_SUCCESS"
+			},
+			"SECONDARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "SECONDARY_PUMP_TURNED_OFF"
+			},
+			"SECONDARY_PUMP_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_SECONDARY_PUMP_TO_TURN_ON_SUCCESS"
+			},
+
+			"FIND_ALTERNATE_CHILLER_TO_TURN_ON_SUCCESS": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "ALTERNATE_CHILLER_VALVE_TURN_ON_REQUESTED"
+			},
+			"ALTERNATE_CHILLER_VALVE_TURN_ON_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "ALTERNATE_CHILLER_VALVE_TURNED_ON"
+			},
+			"ALTERNATE_CHILLER_VALVE_TURNED_ON": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIRST_CHILLER_VALVE_TURN_OFF_REQUESTED"
+			},
+			"FIRST_CHILLER_VALVE_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIRST_CHILLER_VALVE_TURNED_OFF"
+			},
+			"FIRST_CHILLER_VALVE_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "DELETE_FIRST_CHILLER_FROM_SCENARIO"
+			},
+			"DELETE_FIRST_CHILLER_FROM_SCENARIO": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "MARK_ALTERNATE_CHILLER_AS_ACTIVE"
+			},
+			"MARK_CHILLER_AS_FAULTY_IN_SCENARIO": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_ALTERNATE_CHILLER_TO_TURN_ON_SUCCESS"
+			},
+			"MARK_ALTERNATE_CHILLER_AS_ACTIVE": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CHILLER_TURN_ON_REQUESTED"
+			}
+		},
+		"START_AIR_COOLED_CHILLER_SYSTEM": {
+			"SCENARIO_STARTED": {
+				"success": "FIND_CHILLER_TO_TURN_ON_SUCCESS",
+				"failure": "SCENARIO_ABORTED",
+				"handleFailure": ""
+			},
+			"FIND_CHILLER_TO_TURN_ON_SUCCESS": {
+				"success": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED"
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS": {
+				"success": "CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "PRIMARY_PUMP_TURN_ON_REQUESTED"
+			},
+			"CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED": {
+				"success": "CHILLER_OUTLET_VALVE_TURNED_ON",
+				"failure": "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_ON": {
+				"success": "PRIMARY_PUMP_TURN_ON_REQUESTED",
+				"failure": "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"PRIMARY_PUMP_TURN_ON_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_ON",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"PRIMARY_PUMP_TURNED_ON": {
+				"success": "CHILLER_TURN_ON_REQUESTED",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CHILLER_TURN_ON_REQUESTED": {
+				"success": "CHILLER_TURNED_ON",
+				"failure": "CHILLER_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"CHILLER_TURNED_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "CHILLER_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			},
+			"EQUIPMENT_NOT_AVAILABLE": {
+				"success": "SCENARIO_ABORTED",
+				"failure": "",
+				"handleFailure": "SCENARIO_ABORTED"
+			},
+			"CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CHILLER_OUTLET_VALVE_TURNED_OFF"
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_CHILLER_TO_TURN_ON_SUCCESS"
+			},
+			"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "PRIMARY_PUMP_TURNED_OFF"
+			},
+			"PRIMARY_PUMP_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS"
+			},
+			"CHILLER_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "CHILLER_TURNED_OFF"
+			},
+			"CHILLER_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_CHILLER_TO_TURN_ON_SUCCESS"
+			}
+		},
+		"STOP_WATER_COOLED_CHILLER_SYSTEM": {
+			"SCENARIO_STARTED": {
+				"success": "FIND_CHILLER_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_CHILLER_TO_TURN_OFF_SUCCESS":{
+				"success": "CHILLER_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"CHILLER_TURN_OFF_REQUESTED": {
+				"success": "CHILLER_TURNED_OFF",
+				"failure": ""
+			},
+			"CHILLER_TURNED_OFF": {
+				"success": "FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS":{
+				"success": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_OFF",
+				"failure": ""
+			},
+			"PRIMARY_PUMP_TURNED_OFF": {
+				"success": "FIND_COOLING_TOWER_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_COOLING_TOWER_FAN_TO_TURN_OFF_SUCCESS":{
+				"success": "COOLING_TOWER_FAN_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"COOLING_TOWER_FAN_TURN_OFF_REQUESTED": {
+				"success": "COOLING_TOWER_FAN_TURNED_OFF",
+				"failure": ""
+			},
+			"COOLING_TOWER_FAN_TURNED_OFF": {
+				"success": "FIND_COOLING_TOWER_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_COOLING_TOWER_TO_TURN_OFF_SUCCESS":{
+				"success": "COOLING_TOWER_VALVE_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			
+			"COOLING_TOWER_VALVE_TURN_OFF_REQUESTED":{
+				"success": "COOLING_TOWER_VALVE_TURNED_OFF",
+				"failure": ""
+			},
+			"COOLING_TOWER_VALVE_TURNED_OFF":{
+				"success": "FIND_CONDENSER_PUMP_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_CONDENSER_PUMP_TO_TURN_OFF_SUCCESS":{
+				"success": "CONDENSER_PUMP_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"CONDENSER_PUMP_TURN_OFF_REQUESTED": {
+				"success": "CONDENSER_PUMP_TURNED_OFF",
+				"failure": ""
+			},
+			"CONDENSER_PUMP_TURNED_OFF": {
+				"success": "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED": {
+				"success": "CHILLER_OUTLET_VALVE_TURNED_OFF",
+				"failure": ""
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_OFF": {
+				"success": "CONDENSER_VALVE_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"CONDENSER_VALVE_TURN_OFF_REQUESTED":{
+				"success": "CONDENSER_VALVE_TURNED_OFF",
+				"failure": ""
+			},
+			"CONDENSER_VALVE_TURNED_OFF":{
+				"success": "FIND_SECONDARY_PUMP_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_SECONDARY_PUMP_TO_TURN_OFF_SUCCESS":{
+				"success": "SECONDARY_PUMP_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"SECONDARY_PUMP_TURN_OFF_REQUESTED":{
+				"success": "SECONDARY_PUMP_TURNED_OFF",
+				"failure": ""
+			},
+			"SECONDARY_PUMP_TURNED_OFF":{
+				"success": "SCENARIO_COMPLETED",
+				"failure": ""
+			}
+		},
+		"STOP_AIR_COOLED_CHILLER_SYSTEM": {
+			"SCENARIO_STARTED": {
+				"success": "FIND_CHILLER_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_CHILLER_TO_TURN_OFF_SUCCESS":{
+				"success": "CHILLER_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"CHILLER_TURN_OFF_REQUESTED": {
+				"success": "CHILLER_TURNED_OFF",
+				"failure": ""
+			},
+			"CHILLER_TURNED_OFF": {
+				"success": "FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS",
+				"failure": ""
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS":{
+				"success": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_OFF",
+				"failure": ""
+			},
+			"PRIMARY_PUMP_TURNED_OFF": {
+				"success": "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"failure": ""
+			},
+			
+			"CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED": {
+				"success": "CHILLER_OUTLET_VALVE_TURNED_OFF",
+				"failure": ""
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": ""
+			}
+		},
+		"START_COOLING_TOWER_SYSTEM": {
+			"SCENARIO_STARTED": {
+				"success": "FIND_COOLING_TOWER",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"FIND_COOLING_TOWER": {
+				"success": "FIND_COOLING_TOWER_FAN",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "SCENARIO_ABORTED"
+			},
+			"FIND_COOLING_TOWER_FAN": {
+				"success": "COOLING_TOWER_FAN_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "SCENARIO_ABORTED"
+			},
+			"COOLING_TOWER_FAN_TURN_ON_REQUESTED": {
+				"success": "COOLING_TOWER_FAN_TURNED_ON",
+				"failure": "COOLING_TOWER_FAN_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"COOLING_TOWER_FAN_TURNED_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "COOLING_TOWER_FAN_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"COOLING_TOWER_VALVE_TURN_OFF_REQUESTED":{
+				"handleFailure":"COOLING_TOWER_VALVE_TURNED_OFF"
+			},
+			"COOLING_TOWER_VALVE_TURNED_OFF":{
+				"handleFailure":"FIND_COOLING_TOWER"
+			},
+			"COOLING_TOWER_FAN_TURN_OFF_REQUESTED":{
+				"handleFailure":"COOLING_TOWER_FAN_TURNED_OFF"
+			},
+			"COOLING_TOWER_FAN_TURNED_OFF":{
+				"handleFailure":"FIND_COOLING_TOWER_FAN"
+			},
+			"SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			},
+			"EQUIPMENT_NOT_AVAILABLE": {
+				"success": "SCENARIO_ABORTED",
+				"failure": "",
+				"handleFailure": "SCENARIO_ABORTED"
+			}
+
+		},
+		"START_CHILLER_SYSTEM_SERIES": {
+			"SCENARIO_STARTED": {
+				"success": "FIND_CHILLER_TURN_ON_SUCCESS_SERIES",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"FIND_CHILLER_TURN_ON_SUCCESS_SERIES": {
+				"success": "FIND_PUMP_TURN_ON_SUCCESS_SERIES",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"FIND_PUMP_TURN_ON_SUCCESS_SERIES": {
+				"success": "CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED": {
+				"success": "CHILLER_OUTLET_VALVE_TURNED_ON",
+				"failure": "SCENARIO_ABORTED"
+			},
+			"CHILLER_OUTLET_VALVE_TURNED_ON": {
+				"success": "PRIMARY_PUMP_TURN_ON_REQUESTED",
+				"failure": "SCENARIO_ABORTED"
+			},
+			"PRIMARY_PUMP_TURN_ON_REQUESTED":{
+				"success": "PRIMARY_PUMP_TURNED_ON",
+				"failure": "SCENARIO_ABORTED"
+			},
+			"PRIMARY_PUMP_TURNED_ON":{
+				"success": "SCENARIO_COMPLETED",
+				"failure": "SCENARIO_ABORTED"
+			}
+		},
+		"ADD_PRIMARY_PUMP":{
+			"SCENARIO_STARTED": {
+				"success": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS": {
+				"success": "PRIMARY_PUMP_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": "PRIMARY_PUMP_TURN_ON_REQUESTED"
+			},
+			"PRIMARY_PUMP_TURN_ON_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_ON",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"PRIMARY_PUMP_TURNED_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"handleFailure": "SCENARIO_RECOVERED_FROM_FAILURE"
+			},
+			"SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			},
+			"EQUIPMENT_NOT_AVAILABLE": {
+				"success": "SCENARIO_ABORTED",
+				"failure": "",
+				"handleFailure": "SCENARIO_ABORTED"
+			},
+			"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "PRIMARY_PUMP_TURNED_OFF"
+			},
+			"PRIMARY_PUMP_TURNED_OFF": {
+				"success": "",
+				"failure": "",
+				"handleFailure": "FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS"
+			}	
+		},
+		"REMOVE_PRIMARY_PUMP":{
+			"SCENARIO_STARTED": {
+				"success": "FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS": {
+				"success": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE",
+				"handleFailure": ""
+			},
+			"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_OFF",
+				"failure": "",
+				"handleFailure": ""
+			},
+			"PRIMARY_PUMP_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			},
+			"SCENARIO_COMPLETED":{
+
+			}
+		},
+		"SCENARIO_ERROR_FLOW": {
+			"FIND_CHILLER_TO_TURNED_ON_SUCCESS": [
+				"FIND_NEXT_CHILLER"
+			],
+			"FIND_CONDENSER_PUMP_TO_TURNED_ON_SUCCESS": [
+				"FIND_NEXT_CONDENSER_PUMP"
+			],
+			"FIND_PRIMARY_PUMP_TO_TURNED_ON_SUCCESS": [
+				"FIND_NEXT_PRIMARY_PUMP"
+			],
+			"FIND_SECONDARY_PUMP_TO_TURNED_ON_SUCCESS": [
+				"FIND_NEXT_SECONDARY_PUMP"
+			],
+			"CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED": [
+				"CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED",
+				"FIND_NEXT_CHILLER"
+			],
+			"CONDENSER_VALVE_TURN_ON_REQUESTED": [
+				"CONDENSER_VALVE_TURN_ON_REQUESTED",
+				"FIND_NEXT_CHILLER"
+			],
+			"PRIMARY_PUMP_TURN_ON_REQUESTED": [
+				"PRIMARY_PUMP_TURN_ON_REQUESTED",
+				"FIND_NEXT_PRIMARY_PUMP"
+			],
+			"COOLING_TOWER_VALVE_TURN_ON_REQUESTED": [
+				"COOLING_TOWER_VALVE_TURN_ON_REQUESTED",
+				"FIND_NEXT_COOLING_TOWER"
+			],
+			"CONDENSER_PUMP_TURN_ON_REQUESTED": [
+				"CONDENSER_PUMP_TURN_ON_REQUESTED",
+				"FIND_NEXT_CONDENSER_PUMP"
+			],
+			"FIND_COOLING_TOWER_FAN_TO_TURNED_ON_SUCCESS": [
+				"FIND_NEXT_COOLING_TOWER_FAN"
+			],
+			"COOLING_TOWER_FAN_TURN_ON_REQUESTED": [
+				"COOLING_TOWER_FAN_TURN_ON_REQUESTED",
+				"FIND_NEXT_COOLING_TOWER_FAN"
+			],
+			"EQUIPMENT_NOT_AVAILABLE": [
+				"ALARM_NOTIFY"
+			]
+		}
+	},
+	"Scenario_States": {
+		"SET_VALIDATE_PROCESS_PARAMS_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_HEADER",
+			"Eqp_Attributes": {
+				"CWH_ST": 7
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "Monitor"
+		},
+		"SCENARIO_COMPLETED":{
+			
+		},
+		"TURN_ON_PRIMARY_PUMP_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+			  "Pri_Pmp_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"TURNED_ON_PRIMARY_PUMP": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+			  "Pri_Pmp_On/Off_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+
+		},
+		"TURN_ON_CHILLER_REQUESTED":{
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"TURNED_ON_CHILLER":{
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_COOLING_TOWER":{
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Fbk":0
+			},
+			"Eqp_Metrics": {
+				"Equipment_Faulty": false
+			},
+			"EQP_COMPONENTS": [
+				{
+					"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+					"Eqp_Attributes": {
+						"CT_Fan_AM_SS": 1,
+						"CT_Fan_Run_SS": 0,
+						"CT_Fan_Trip_SS": 0
+					},
+					"Eqp_Metrics": {
+						"rh_cumulative": "LEAST",
+						"Equipment_Faulty": false
+					}
+				}
+			],
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_COOLING_TOWER_FAN":{
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_AM_SS": 1,
+				"CT_Fan_Run_SS": 0,
+				"CT_Fan_Trip_SS": 0
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update_ct",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_CHILLER_TURN_ON_SUCCESS_SERIES":{
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off": 0,
+				"CH_Trip_SS":0,
+				"CH_AM_SS":1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Series":"SERIES_A",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_series_update"
+		},
+		"FIND_PUMP_TURN_ON_SUCCESS_SERIES":{
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On_Off": 0,
+				"Pri_Pmp_Trip_SS":0,
+				"Pri_Pmp_AM_SS":1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Series":"SERIES_A",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_series_update"
+		},
+		"CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_Out_Vlv_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CHILLER_OUTLET_VALVE_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_Out_Vlv_On_Off_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+			
+		},
+		"CONDENSER_VALVE_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CD_In_Vlv_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CONDENSER_VALVE_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CD_In_Vlv_On_Off_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"CONDENSER_VALVE_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CD_In_Vlv_On_Off": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CONDENSER_VALVE_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CD_In_Vlv_On_Off_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"CHILLER_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+			
+		},
+		"CHILLER_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CHILLER_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"CHILLER_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"PRIMARY_PUMP_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"PRIMARY_PUMP_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On/Off_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"CHECK_CHILLER_WATER_FLOW_STATUS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CHW_Flow_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"CONDENSER_PUMP_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CONDENSER_PUMPS",
+			"Eqp_Attributes": {
+				"Cnd_Pmp_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CONDENSER_PUMP_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CONDENSER_PUMPS",
+			"Eqp_Attributes": {
+				"Cnd_Pmp_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"CHECK_CONDENSER_WATER_FLOW_STATUS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CHW_Flow_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"FIND_COOLING_TOWER_TO_TURNED_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CTW_Low_Lvl": 0,
+				"CT_Out_Vlv_On_Off_Cmd":1,
+				"CT_Out_Vlv_On_Off_Fbk":1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"EQP_COMPONENTS": [
+				{
+					"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+					"Eqp_Attributes": {
+						"CT_Fan_AM_SS": 1,
+						"CT_Fan_Run_SS": 0,
+						"CT_Fan_Trip_SS": 0
+					},
+					"Eqp_Metrics": {
+						"rh_cumulative": "LEAST",
+						"Equipment_Faulty": false
+					}
+				}
+			],
+			"ACTION_REQUIRED": "find_update"
+		},
+		"COOLING_TOWER_VALVE_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Cmd": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "write",
+			"TRANSITION_INTERNAL": true
+		},
+		"COOLING_TOWER_VALVE_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Fbk": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_COOLING_TOWER_FAN_TURN_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_AM_SS": 1,
+				"CT_Fan_Run_SS": 0,
+				"CT_Fan_Trip_SS": 0
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL": true
+		},
+		"COOLING_TOWER_FAN_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_On_Off_Cmd": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"COOLING_TOWER_FAN_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_On_Off_Cmd": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check_ctf",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_SECONDARY_PUMP_TO_TURN_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_SECONDARY_PUMPS",
+			"Eqp_Attributes": {
+				"Sec_Pmp_On_Off":0,
+				"Sec_Pmp_Trip_SS": 0,
+				"Sec_Pmp_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL":true
+		},
+		"SECONDARY_PUMP_TURN_ON_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_SECONDARY_PUMPS",
+			"Eqp_Attributes": {
+				"Sec_Pmp_On_Off": 1
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"SECONDARY_PUMP_TURNED_ON": {
+			"EQUIPMENT_TYPE": "NONGL_SS_SECONDARY_PUMPS",
+			"Eqp_Attributes": {
+				"Sec_Pmp_SS": 1
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_CHILLER_TO_TURN_OFF_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_Out_Vlv_On_Off_SS": 1,
+				"CH_Trip_SS": 0,
+				"CH_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"measured_time": "CH_Out_Vlv_On_Off_SS",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_remove",
+			"TRANSITION_INTERNAL": true
+		},
+		"CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_Out_Vlv_On_Off": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CHILLER_OUTLET_VALVE_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_Out_Vlv_On_Off_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"FIND_PRIMARY_PUMP_TO_TURN_OFF_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On_Off": 1,
+				"Pri_Pmp_Trip_SS": 0,
+				"Pri_Pmp_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"measured_time": "Pri_Pmp_On/Off_SS", 
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_remove"
+		},
+		"PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On_Off": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"PRIMARY_PUMP_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On/Off_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_CONDENSER_PUMP_TO_TURN_OFF_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CONDENSER_PUMPS",
+			"Eqp_Attributes": {
+				"Cnd_Pmp_SS": 1,
+				"Cnd_Pmp_Trip_SS": 0,
+				"Cnd_Pmp_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update"
+		},
+		"CONDENSER_PUMP_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CONDENSER_PUMPS",
+			"Eqp_Attributes": {
+				"Cnd_Pmp_On_Off": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"CONDENSER_PUMP_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CONDENSER_PUMPS",
+			"Eqp_Attributes": {
+				"Cnd_Pmp_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"FIND_COOLING_TOWER_TO_TURN_OFF_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Fbk": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"EQP_COMPONENTS": [
+				{
+					"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+					"Eqp_Attributes": {
+						"CT_Fan_AM_SS": 1,
+						"CT_Fan_On_Off_SS": 1,
+						"CT_Fan_Trip_SS": 0
+					},
+					"Eqp_Metrics": {
+						"rh_cumulative": "LEAST",
+						"Equipment_Faulty": false
+					}
+				}
+			],
+			"ACTION_REQUIRED": "find_update"
+		},
+		"COOLING_TOWER_VALVE_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Cmd": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"COOLING_TOWER_VALVE_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Fbk": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"FIND_COOLING_TOWER_FAN_TO_TURNED_OFF_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_AM_SS": 1,
+				"CT_Fan_Run_SS": 1,
+				"CT_Fan_Trip_SS": 0
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update"
+		},
+		"COOLING_TOWER_FAN_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_On_Off_Cmd": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"COOLING_TOWER_FAN_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER_FAN",
+			"Eqp_Attributes": {
+				"CT_Fan_On_Off_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"FIND_SECONDARY_PUMP_TO_TURN_OFF_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_SECONDARY_PUMPS",
+			"Eqp_Attributes": {
+				"Sec_Pmp_SS": 1,
+				"Sec_Pmp_Trip_SS": 0,
+				"Sec_Pmp_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update"
+		},
+		"SECONDARY_PUMP_TURN_OFF_REQUESTED": {
+			"EQUIPMENT_TYPE": "NONGL_SS_SECONDARY_PUMPS",
+			"Eqp_Attributes": {
+				"Sec_Pmp_On_Off": 0
+			},
+			"ACTION_REQUIRED": "write"
+		},
+		"SECONDARY_PUMP_TURNED_OFF": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"Sec_Pmp_SS": 0
+			},
+			"ACTION_REQUIRED": "snapshot_check"
+		},
+		"FIND_CHILLER_TO_TURN_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CHILLER",
+			"Eqp_Attributes": {
+				"CH_On_Off_SS":0,
+				"CH_Trip_SS": 0,
+				"CH_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_PRIMARY_PUMP_TO_TURN_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_PUMPS",
+			"Eqp_Attributes": {
+				"Pri_Pmp_On_Off":0,
+				"Pri_Pmp_Trip_SS": 0,
+				"Pri_Pmp_AM_SS": 1
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_CONDENSER_PUMP_TO_TURN_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_CONDENSER_PUMPS",
+			"Eqp_Attributes": {
+				"Cnd_Pmp_On_Off": 0,
+				"Cnd_Pmp_Trip_SS":0,
+				"Cnd_Pmp_AM_SS":1
+			},
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL": true
+		},
+		"FIND_COOLING_TOWER_TO_TURN_ON_SUCCESS": {
+			"EQUIPMENT_TYPE": "NONGL_SS_COOLING_TOWER",
+			"Eqp_Attributes": {
+				"CT_Out_Vlv_On_Off_Fbk":0
+			},
+			"Eqp_Metrics": {
+				"rh_cumulative": "LEAST",
+				"Equipment_Faulty": false
+			},
+			"EQP_COMPONENTS": {
+				"NONGL_SS_COOLING_TOWER_FAN": {
+					"Eqp_Attributes": {
+						"CT_Fan_AM_SS": 1,
+						"CT_Fan_On_Off_SS": 0,
+						"CT_Fan_Trip_SS": 0
+					},
+					"Eqp_Metrics": {
+						"rh_cumulative": "LEAST",
+						"Equipment_Faulty": false
+					}
+				}
+			},
+			"ACTION_REQUIRED": "find_update",
+			"TRANSITION_INTERNAL": true
+		},
+
+		"FIND_ALTERNATE_CHILLER_TO_TURN_ON_SUCCESS": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "Eqp_Attributes": {"CH_Out_Vlv_On_Off_SS": 0, "CH_Trip_SS": 0, "CH_AM_SS": 1}, "Eqp_Metrics": {"rh_cumulative": "LEAST", "Equipment_Faulty": false}, "ACTION_REQUIRED": "find_update"},
+		"ALTERNATE_CHILLER_VALVE_TURN_ON_REQUESTED": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "Eqp_Attributes": { "CH_On_Off": 1 }, "ACTION_REQUIRED": "write"},
+		"ALTERNATE_CHILLER_VALVE_TURNED_ON": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "Eqp_Attributes": { "CH_Out_Vlv_On_Off_SS": 1 }, "ACTION_REQUIRED": "snapshot_check"},
+		"FIRST_CHILLER_VALVE_TURN_OFF_REQUESTED": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "Eqp_Attributes": { "CH_On_Off": 0 }, "ACTION_REQUIRED": "write"},
+		"FIRST_CHILLER_VALVE_TURNED_OFF": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "Eqp_Attributes": { "CH_Out_Vlv_On_Off_SS": 0 }, "ACTION_REQUIRED": "snapshot_check"},
+		"DELETE_FIRST_CHILLER_FROM_SCENARIO": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "ACTION_REQUIRED": "snapshot_check"},
+		"MARK_ALTERNATE_CHILLER_AS_ACTIVE": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "ACTION_REQUIRED": "snapshot_check"},
+		"MARK_CHILLER_AS_FAULTY_IN_SCENARIO": {"EQUIPMENT_TYPE": "NONGL_SS_CHILLER", "ACTION_REQUIRED": "snapshot_check"}
+	},
+	"EQUIPMENT_CONTROL_ACTION": {
+		"TURN_ON_PRIMARY_PUMP": {
+		  "SCENARIO_STARTED": {
+			"success": "TURN_ON_PRIMARY_PUMP_REQUESTED",
+			"failure": "EQUIPMENT_NOT_AVAILABLE"
+		  },
+		  "TURN_ON_PRIMARY_PUMP_REQUESTED": {
+			"success": "TURNED_ON_PRIMARY_PUMP",
+			"failure": "",
+			"handleFailure": ""
+		  },
+		  "TURNED_ON_PRIMARY_PUMP": {
+			"success": "SCENARIO_COMPLETED",
+			"failure": "",
+			"handleFailure": ""
+		  },
+		  "SCENARIO_COMPLETED": {
+			"success": "",
+			"failure": "",
+			"handleFailure": ""
+		  }
+		},
+		"TURN_ON_CHILLER": {
+			"SCENARIO_STARTED": {
+			  "success": "TURN_ON_CHILLER_REQUESTED",
+			  "failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"TURN_ON_CHILLER_REQUESTED": {
+			  "success": "TURNED_ON_CHILLER",
+			  "failure": "",
+			  "handleFailure": ""
+			},
+			"TURNED_ON_CHILLER": {
+			  "success": "SCENARIO_COMPLETED",
+			  "failure": "",
+			  "handleFailure": ""
+			},
+			"SCENARIO_COMPLETED": {
+			  "success": "",
+			  "failure": "",
+			  "handleFailure": ""
+			}
+		},	
+		"TURN_ON_SECONDARY_PUMP": {
+			"SCENARIO_STARTED": {
+			  "success": "SECONDARY_PUMP_TURN_ON_REQUESTED",
+			  "failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"SECONDARY_PUMP_TURN_ON_REQUESTED": {
+			  "success": "SECONDARY_PUMP_TURNED_ON",
+			  "failure": "",
+			  "handleFailure": ""
+			},
+			"SECONDARY_PUMP_TURNED_ON": {
+			  "success": "SCENARIO_COMPLETED",
+			  "failure": "",
+			  "handleFailure": ""
+			},
+			"SCENARIO_COMPLETED": {
+			  "success": "",
+			  "failure": "",
+			  "handleFailure": ""
+			}
+		},
+		"TURN_ON_COOLING_TOWER": {
+			"SCENARIO_STARTED": {
+			  "success": "COOLING_TOWER_VALVE_TURN_ON_REQUESTED",
+			  "failure": "EQUIPMENT_NOT_AVAILABLE"
+			},
+			"COOLING_TOWER_VALVE_TURN_ON_REQUESTED": {
+			  "success": "COOLING_TOWER_VALVE_TURNED_ON",
+			  "failure": "",
+			  "handleFailure": ""
+			},
+			"COOLING_TOWER_VALVE_TURNED_ON": {
+			  "success": "SCENARIO_COMPLETED",
+			  "failure": "",
+			  "handleFailure": ""
+			},
+			"SCENARIO_COMPLETED": {
+			  "success": "",
+			  "failure": "",
+			  "handleFailure": ""
+			}
+		},
+		"TURN_ON_CONDENSER_PUMP":{
+			"SCENARIO_STARTED": {
+				"success": "CONDENSER_PUMP_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "CONDENSER_PUMP_TURN_ON_REQUESTED": {
+				"success": "CONDENSER_PUMP_TURNED_ON",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "CONDENSER_PUMP_TURNED_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			  }
+		},
+		"TURN_ON_COOLING_TOWER_FAN":{
+			"SCENARIO_STARTED": {
+				"success": "COOLING_TOWER_FAN_TURN_ON_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "COOLING_TOWER_FAN_TURN_ON_REQUESTED": {
+				"success": "COOLING_TOWER_FAN_TURNED_ON",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "COOLING_TOWER_FAN_TURNED_ON": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""	
+		}
+		},
+		"TURN_OFF_PRIMARY_PUMP":{
+			"SCENARIO_STARTED": {
+				"success": "PRIMARY_PUMP_TURN_OFF_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "PRIMARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "PRIMARY_PUMP_TURNED_OFF",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "PRIMARY_PUMP_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			  }
+		},
+		"TURN_OFF_SECONDARY_PUMP":{
+			"SCENARIO_STARTED": {
+				"success": "SECONDARY_PUMP_TURN_OFF_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "SECONDARY_PUMP_TURN_OFF_REQUESTED": {
+				"success": "SECONDARY_PUMP_TURNED_OFF",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SECONDARY_PUMP_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			  }
+		},
+		"TURN_OFF_CONDENSER_PUMP":{
+			"SCENARIO_STARTED": {
+				"success": "CONDENSER_PUMP_TURN_OFF_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "CONDENSER_PUMP_TURN_OFF_REQUESTED": {
+				"success": "CONDENSER_PUMP_TURNED_OFF",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "CONDENSER_PUMP_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			  }
+		},
+		"TURN_OFF_CHILLER":{
+			"SCENARIO_STARTED": {
+				"success": "CHILLER_TURN_OFF_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "CHILLER_TURN_OFF_REQUESTED": {
+				"success": "CHILLER_TURNED_OFF",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "CHILLER_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			  }
+		},
+		"TURN_OFF_COOLING_TOWER":{
+			"SCENARIO_STARTED": {
+				"success": "COOLING_TOWER_VALVE_TURN_OFF_REQUESTED",
+				"failure": "EQUIPMENT_NOT_AVAILABLE"
+			  },
+			  "COOLING_TOWER_VALVE_TURN_OFF_REQUESTED": {
+				"success": "COOLING_TOWER_VALVE_TURNED_OFF",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "COOLING_TOWER_VALVE_TURNED_OFF": {
+				"success": "SCENARIO_COMPLETED",
+				"failure": "",
+				"handleFailure": ""
+			  },
+			  "SCENARIO_COMPLETED": {
+				"success": "",
+				"failure": "",
+				"handleFailure": ""
+			  }
+		}
+	},
+	"Scenario_States_TBD": [
+		"SCENARIO_STARTED",
+		"UNEXPECTED_FAULT_RECEIVED",
+		"ERROR_IN_SCENARIO",
+		"SCENARIO_COMPLETED",
+		"<SOME_MORE_TO_BE _ADDED>"
+	],
+	"Find_Equipment_Criteria": {
+		"NONGL_SS_PUMPS": {},
+		"NONGL_SS_SECONDARY_PUMPS": {},
+		"Eqp_Type": "NONGL_SS_SECONDARY_PUMPS <or any other as required>",
+		"rh_cumulative": "LEAST <could be HIGHEST for turn off>",
+		"Faulty": false,
+		"Eqp_Status": "Off <could be On to turn Off>"
+	},
+	"Fault_Detection_Criteria": {
+		  "CHILLER_OUTLET_VALVE_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHILLER_OUTLET_VALVE_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_VALVE_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_VALVE_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "PRIMARY_PUMP_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "PRIMARY_PUMP_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHECK_CHILLER_WATER_FLOW_STATUS": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "COOLING_TOWER_VALVE_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "COOLING_TOWER_VALVE_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_PUMP_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_PUMP_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHECK_CONDENSER_WATER_FLOW_STATUS": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHILLER_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHILLER_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 120
+		  },
+		  "CHILLER_OUTLET_VALVE_TURN_OFF_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHILLER_OUTLET_VALVE_TURNED_OFF": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_VALVE_TURN_OFF_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_VALVE_TURNED_OFF": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_PUMP_TURN_OFF_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CONDENSER_PUMP_TURNED_OFF": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "COOLING_TOWER_VALVE_TURN_OFF_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "COOLING_TOWER_VALVE_TURNED_OFF": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHILLER_TURN_OFF_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "CHILLER_TURNED_OFF": {
+			"NO_RESPONSE_IN_SECONDS": 60
+		  },
+		  "SECONDARY_PUMP_TURN_ON_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60.0
+		  },
+		  "SECONDARY_PUMP_TURNED_ON": {
+			"NO_RESPONSE_IN_SECONDS": 60.0
+		  },
+		  "SECONDARY_PUMP_TURN_OFF_REQUESTED": {
+			"NO_RESPONSE_IN_SECONDS": 60.0
+		  },
+		  "SECONDARY_PUMP_TURNED_OFF": {
+			"NO_RESPONSE_IN_SECONDS": 60.0
+		  }
+
+	},
+	"EQUIPMENT_TYPE": [
+		"NONGL_SS_CHILLER",
+		"NONGL_SS_PUMPS",
+		"NONGL_SS_PRIMARY_VARIABLE_PUMP",
+		"NONGL_SS_SECONDARY_PUMPS",
+		"NONGL_SS_CONDENSER_PUMPS",
+		"NONGL_SS_COOLING_TOWER",
+		"NONGL_SS_COOLING_TOWER_FAN",
+		"NONGL_SS_CT_VARIABLE_FAN",
+		"NONGL_SS_HEADER"
+	],
+	"CPM_SCENARIOS": [
+		"START_AIR_COOLED_CHILLER_SYSTEM",
+		"START_WATER_COOLED_CHILLER_SYSTEM",
+		"START_CHILLER_SYSTEM_SERIES",
+		"STOP_AIR_COOLED_CHILLER_SYSTEM",
+		"STOP_WATER_COOLED_CHILLER_SYSTEM",
+		"SET_CHILLER_PLANT_IN_MANUAL_MODE",
+		"SET_CHILLER_PLANT_IN_FAILED_MODE",
+		"START_CHILLER_SYSTEM",
+		"STOP_CHILLER_SYSTEM",
+		"FAULTY_SCENARIOS",
+		"PRIMARY_PUMP_FAILED",
+		"CHILLER_TRIPPED",
+		"ADD_PRIMARY_PUMP",
+		"REMOVE_PRIMARY_PUMP",
+		"START_COOLING_TOWER_SYSTEM",
+		""
+	],
+	"INTERMEDIATE_SCENARIOS": [
+		"START_CHILLER",
+		"STOP_CHILLER",
+		"CHILLER_FAULT",
+		"START_<EQUIPMENT>",
+		"STOP_<EQUIPMENT>",
+		"<EQUIPMENT>_FAULT"
+	],
+	"Plant_Snapshot": {
+		"NONGL_SS_CHILLER": {
+			"0001b00000": {
+				"BACnetDeviceAddress": "192.168.1.11:2000",
+				"Eqp_Attributes": {
+					"CH_On_Off": {
+						"objId": "5:10001",
+						"objName": "GL 09 00 1e B0 0 000",
+						"presentValue": 0
+					},
+					"CH_SS": {
+						"objId": "5:10002",
+						"objName": "GL 09 00 1e B0 0 001",
+						"presentValue": 1
+					},
+					"CH_Trip_SS": {
+						"objId": "5:10003",
+						"objName": "GL 09 00 1e B0 0 002",
+						"presentValue": 0
+					},
+					"CHW_Flow_SS": {
+						"objId": "5:10004",
+						"objName": "GL 09 00 1e B0 0 003",
+						"presentValue": 1
+					},
+					"CH_Vlv_On_Off": {
+						"objId": "5:25",
+						"objName": "GL 09 00 1e B0 0 004",
+						"presentValue": 1
+					},
+					"CH_Vlv_SS": {
+						"objId": "2:10006",
+						"objName": "GL 09 00 1e B0 0 005",
+						"presentValue": 1
+					},
+					"CWH_ST": {
+						"objId": "2:10007",
+						"objName": "GL 09 00 1e B0 0 006",
+						"presentValue": 8.0
+					},
+					"CWH_ST_SP": {
+						"objId": "2:10008",
+						"objName": "GL 09 00 1e B0 0 007",
+						"presentValue": 7.5
+					},
+					"CWH_RT": {
+						"objId": "2:10009",
+						"objName": "GL 09 00 1e B0 0 008",
+						"presentValue": 13.0
+					},
+					"CWH_RT_SP": {
+						"objId": "2:10010",
+						"objName": "GL 09 00 1e B0 0 009",
+						"presentValue": 60.0
+					},
+					"CH_AM_SS": {
+						"objId": "5:10011",
+						"objName": "GL 09 00 1e B0 0 00a",
+						"presentValue": 1
+					},
+					"CndW_HST": {
+						"objId": "2:10012",
+						"objName": "GL 09 00 1e B0 0 00b",
+						"presentValue": 60
+					},
+					"CndW_HRT": {
+						"objId": "2:10013",
+						"objName": "GL 09 00 1e B0 0 00c",
+						"presentValue": 11
+					},
+					"VFD_Ph_Cur": {
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 8.5
+					},
+					"CD_In_Vlv_On_Off":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					},
+					"CD_In_Vlv_On_Off_SS":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 36,
+					"Equipment_Faulty": true
+					
+				}
+			},
+			"0002b00000": {
+				"BACnetDeviceAddress": "192.168.1.11:2000",
+				"Eqp_Attributes": {
+					"CH_On_Off": {
+						"objId": "5:10001",
+						"objName": "GL 09 00 1e B0 0 000",
+						"presentValue": 0
+					},
+					"CH_SS": {
+						"objId": "5:10002",
+						"objName": "GL 09 00 1e B0 0 001",
+						"presentValue": 0
+					},
+					"CH_Trip_SS": {
+						"objId": "5:10003",
+						"objName": "GL 09 00 1e B0 0 002",
+						"presentValue": 0
+					},
+					"CHW_Flow_SS": {
+						"objId": "5:10004",
+						"objName": "GL 09 00 1e B0 0 003",
+						"presentValue": 1
+					},
+					"CH_Vlv_On_Off": {
+						"objId": "5:25",
+						"objName": "GL 09 00 1e B0 0 004",
+						"presentValue": 1
+					},
+					"CH_Vlv_SS": {
+						"objId": "2:10006",
+						"objName": "GL 09 00 1e B0 0 005",
+						"presentValue": 1
+					},
+					"CWH_ST": {
+						"objId": "2:10007",
+						"objName": "GL 09 00 1e B0 0 006",
+						"presentValue": 8.0
+					},
+					"CWH_ST_SP": {
+						"objId": "2:10008",
+						"objName": "GL 09 00 1e B0 0 007",
+						"presentValue": 7.5
+					},
+					"CWH_RT": {
+						"objId": "2:10009",
+						"objName": "GL 09 00 1e B0 0 008",
+						"presentValue": 13.0
+					},
+					"CWH_RT_SP": {
+						"objId": "2:10010",
+						"objName": "GL 09 00 1e B0 0 009",
+						"presentValue": 60.0
+					},
+					"CH_AM_SS": {
+						"objId": "5:10011",
+						"objName": "GL 09 00 1e B0 0 00a",
+						"presentValue": 1
+					},
+					"CndW_HST": {
+						"objId": "2:10012",
+						"objName": "GL 09 00 1e B0 0 00b",
+						"presentValue": 60
+					},
+					"CndW_HRT": {
+						"objId": "2:10013",
+						"objName": "GL 09 00 1e B0 0 00c",
+						"presentValue": 11
+					},
+					"VFD_Ph_Cur": {
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 8.5
+					},
+					"CD_In_Vlv_On_Off":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					},
+					"CD_In_Vlv_On_Off_SS":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					}
+					
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 15,
+					"Equipment_Faulty": true
+				}
+			},
+			"0003b00000": {
+				"BACnetDeviceAddress": "192.168.1.11:2000",
+				"Eqp_Attributes": {
+					"CH_On_Off": {
+						"objId": "5:10001",
+						"objName": "GL 09 00 1e B0 0 000",
+						"presentValue": 0
+					},
+					"CH_SS": {
+						"objId": "5:10002",
+						"objName": "GL 09 00 1e B0 0 001",
+						"presentValue": 1
+					},
+					"CH_Trip_SS": {
+						"objId": "5:10003",
+						"objName": "GL 09 00 1e B0 0 002",
+						"presentValue": 0
+					},
+					"CHW_Flow_SS": {
+						"objId": "5:10004",
+						"objName": "GL 09 00 1e B0 0 003",
+						"presentValue": 1
+					},
+					"CH_Vlv_On_Off": {
+						"objId": "5:25",
+						"objName": "GL 09 00 1e B0 0 004",
+						"presentValue": 1
+					},
+					"CH_Vlv_SS": {
+						"objId": "2:10006",
+						"objName": "GL 09 00 1e B0 0 005",
+						"presentValue": 1
+					},
+					"CWH_ST": {
+						"objId": "2:10007",
+						"objName": "GL 09 00 1e B0 0 006",
+						"presentValue": 8.0
+					},
+					"CWH_ST_SP": {
+						"objId": "2:10008",
+						"objName": "GL 09 00 1e B0 0 007",
+						"presentValue": 7.5
+					},
+					"CWH_RT": {
+						"objId": "2:10009",
+						"objName": "GL 09 00 1e B0 0 008",
+						"presentValue": 13.0
+					},
+					"CWH_RT_SP": {
+						"objId": "2:10010",
+						"objName": "GL 09 00 1e B0 0 009",
+						"presentValue": 60.0
+					},
+					"CH_AM_SS": {
+						"objId": "5:10011",
+						"objName": "GL 09 00 1e B0 0 00a",
+						"presentValue": 1
+					},
+					"CndW_HST": {
+						"objId": "2:10012",
+						"objName": "GL 09 00 1e B0 0 00b",
+						"presentValue": 60
+					},
+					"CndW_HRT": {
+						"objId": "2:10013",
+						"objName": "GL 09 00 1e B0 0 00c",
+						"presentValue": 11
+					},
+					"VFD_Ph_Cur": {
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 8.5
+					},
+					"CD_In_Vlv_On_Off":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					},
+					"CD_In_Vlv_On_Off_SS":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 36,
+					"Equipment_Faulty": false
+				}
+			},
+			"0004b00000": {
+				"BACnetDeviceAddress": "192.168.0.106:2209",
+				"Eqp_Attributes": {
+					"CH_On_Off": {
+						"objId": "5:10001",
+						"objName": "GL 09 00 1e B0 0 000",
+						"presentValue": 0
+					},
+					"CH_SS": {
+						"objId": "5:10002",
+						"objName": "GL 09 00 1e B0 0 001",
+						"presentValue": 1
+					},
+					"CH_Trip_SS": {
+						"objId": "5:10003",
+						"objName": "GL 09 00 1e B0 0 002",
+						"presentValue": 0
+					},
+					"CHW_Flow_SS": {
+						"objId": "5:10004",
+						"objName": "GL 09 00 1e B0 0 003",
+						"presentValue": 1
+					},
+					"CH_Vlv_On_Off": {
+						"objId": "5:25",
+						"objName": "GL 09 00 1e B0 0 004",
+						"presentValue": 1
+					},
+					"CH_Vlv_SS": {
+						"objId": "2:10006",
+						"objName": "GL 09 00 1e B0 0 005",
+						"presentValue": 1
+					},
+					"CWH_ST": {
+						"objId": "2:10007",
+						"objName": "GL 09 00 1e B0 0 006",
+						"presentValue": 8.0
+					},
+					"CWH_ST_SP": {
+						"objId": "2:10008",
+						"objName": "GL 09 00 1e B0 0 007",
+						"presentValue": 7.5
+					},
+					"CWH_RT": {
+						"objId": "2:10009",
+						"objName": "GL 09 00 1e B0 0 008",
+						"presentValue": 13.0
+					},
+					"CWH_RT_SP": {
+						"objId": "2:10010",
+						"objName": "GL 09 00 1e B0 0 009",
+						"presentValue": 60.0
+					},
+					"CH_AM_SS": {
+						"objId": "5:10011",
+						"objName": "GL 09 00 1e B0 0 00a",
+						"presentValue": 1
+					},
+					"CndW_HST": {
+						"objId": "2:10012",
+						"objName": "GL 09 00 1e B0 0 00b",
+						"presentValue": 60
+					},
+					"CndW_HRT": {
+						"objId": "2:10013",
+						"objName": "GL 09 00 1e B0 0 00c",
+						"presentValue": 11
+					},
+					"VFD_Ph_Cur": {
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 8.5
+					},
+					"CD_In_Vlv_On_Off":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					},
+					"CD_In_Vlv_On_Off_SS":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 36,
+					"Equipment_Faulty": false
+					
+				}
+			},
+			"0000b00000": {
+				"BACnetDeviceAddress": "192.168.1.11:2000",
+				"Eqp_Attributes": {
+					"CH_On_Off": {
+						"objId": "5:10001",
+						"objName": "GL 09 00 1e B0 0 000",
+						"presentValue": 0
+					},
+					"CH_SS": {
+						"objId": "5:10002",
+						"objName": "GL 09 00 1e B0 0 001",
+						"presentValue": 1
+					},
+					"CH_Trip_SS": {
+						"objId": "5:10003",
+						"objName": "GL 09 00 1e B0 0 002",
+						"presentValue": 0
+					},
+					"CHW_Flow_SS": {
+						"objId": "5:10004",
+						"objName": "GL 09 00 1e B0 0 003",
+						"presentValue": 1
+					},
+					"CH_Out_Vlv_On_Off": {
+						"objId": "5:10005",
+						"objName": "GL 09 00 1e B0 0 004",
+						"presentValue": 0
+
+					},
+					"CH_Out_Vlv_On_Off_SS": {
+						"objId": "5:10006",
+						"objName": "GL 09 00 1e B0 0 005",
+						"presentValue": 0
+					},
+					"CWH_ST": {
+						"objId": "2:10007",
+						"objName": "GL 09 00 1e B0 0 006",
+						"presentValue": 0
+					},
+					"CWH_ST_SP": {
+						"objId": "2:10008",
+						"objName": "GL 09 00 1e B0 0 007",
+						"presentValue": 0
+					},
+					"CWH_RT": {
+						"objId": "2:10009",
+						"objName": "GL 09 00 1e B0 0 008",
+						"presentValue": 0
+					},
+					"CWH_RT_SP": {
+						"objId": "2:10010",
+						"objName": "GL 09 00 1e B0 0 009",
+						"presentValue": 0
+					},
+					"CH_AM_SS": {
+						"objId": "5:10011",
+						"objName": "GL 09 00 1e B0 0 00a",
+						"presentValue": 1
+					},
+					"CndW_HST": {
+						"objId": "2:10012",
+						"objName": "GL 09 00 1e B0 0 00b",
+						"presentValue": 0
+					},
+					"CndW_HRT": {
+						"objId": "2:10013",
+						"objName": "GL 09 00 1e B0 0 00c",
+						"presentValue": 0
+					},
+					"VFD_Ph_Cur": {
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 0
+					},
+					"CD_In_Vlv_On_Off":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 0
+					},
+					"CD_In_Vlv_On_Off_SS":{
+						"objId": "2:10014",
+						"objName": "GL 09 00 1e B0 0 00d",
+						"presentValue": 1
+					}
+					
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 15,
+					"Equipment_Faulty": false
+				}
+			}
+		},
+		"NONGL_SS_PUMPS": {
+			"0000b10000": {
+				"BACnetDeviceAddress": "192.168.22.16",
+				"Eqp_Attributes": {
+					"Pri_Pmp_On_Off": {
+						"objId": "5:20001",
+						"objName": "GL 16 00 06 b1 0 678",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Pri_Pmp_SS": {
+						"objId": "5:20002",
+						"objName": "GL 16 00 06 b1 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Pri_Pmp_Trip_SS": {
+						"objId": "5:20003",
+						"objName": "GL 16 00 06 b1 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Pri_Pmp_AM_SS": {
+						"objId": "5:20004",
+						"objName": "GL 16 00 06 b1 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 15,
+					"Equipment_Faulty": false
+				}
+			},
+			"0001b10000": {
+				"BACnetDeviceAddress": "192.168.22.16",
+				"Eqp_Attributes": {
+					"Pri_Pmp_On_Off": {
+						"objId": "5:20001",
+						"objName": "GL 16 00 06 b1 0 678",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Pri_Pmp_SS": {
+						"objId": "5:20002",
+						"objName": "GL 16 00 06 b1 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Pri_Pmp_Trip_SS": {
+						"objId": "5:20003",
+						"objName": "GL 16 00 06 b1 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Pri_Pmp_AM_SS": {
+						"objId": "5:20004",
+						"objName": "GL 16 00 06 b1 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 16,
+					"Equipment_Faulty": false
+				}
+			}
+		},
+		"NONGL_SS_PRIMARY_VARIABLE_PUMP": {},
+		"NONGL_SS_SECONDARY_PUMPS": {
+			"GL 25 00 05 b2": {
+				"BACnetDeviceAddress": "192.168.22.25",
+				"Eqp_Attributes": {
+					"Sec_Pmp_On_Off": {
+						"objId": "5:30001",
+						"objName": "GL 25 00 05 b2 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Sec_Pmp_SS": {
+						"objId": "5:30002",
+						"objName": "GL 25 00 05 b2 0 478",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Sec_Pmp_Trip_SS": {
+						"objId": "5:30003",
+						"objName": "GL 25 00 05 b2 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Sec_Pmp_AM_SS": {
+						"objId": "5:30004",
+						"objName": "GL 25 00 05 b2 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 35,
+					"Equipment_Faulty": false
+				}
+			},
+			"GL 26 00 06 b2": {
+				"BACnetDeviceAddress": "192.168.22.26",
+				"Eqp_Attributes": {
+					"Sec_Pmp_On_Off": {
+						"objId": "5:30001",
+						"objName": "GL 26 00 06 b2 0 678",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Sec_Pmp_SS": {
+						"objId": "5:30002",
+						"objName": "GL 26 00 06 b2 0 478",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Sec_Pmp_Trip_SS": {
+						"objId": "5:30003",
+						"objName": "GL 26 00 06 b2 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Sec_Pmp_AM_SS": {
+						"objId": "5:30004",
+						"objName": "GL 26 00 06 b2 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 60,
+					"Equipment_Faulty": false
+				}
+			},
+			"GL 27 00 07 b2": {
+				"BACnetDeviceAddress": "192.168.0.106:2225",
+				"Eqp_Attributes": {
+					"Sec_Pmp_On_Off": {
+						"objId": "5:30001",
+						"objName": "GL 27 00 0b b2 0 000",
+						"presentValue": 1
+					},
+					"Sec_Pmp_SS": {
+						"objId": "5:30002",
+						"objName": "GL 27 00 0b b2 0 001",
+						"presentValue": 1
+					},
+					"Sec_Pmp_Trip_SS": {
+						"objId": "5:30003",
+						"objName": "GL 27 00 0b b2 0 002",
+						"presentValue": 0
+					},
+					"Sec_Pmp_AM_SS": {
+						"objId": "5:30004",
+						"objName": "GL 27 00 0b b2 0 003",
+						"presentValue": 1
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative":24,
+					"Equipment_Faulty": true
+				}
+			}
+		},
+		"NONGL_SS_CONDENSER_PUMP": {
+			"0000b40000": {
+				"BACnetDeviceAddress": "192.168.22.25",
+				"Eqp_Attributes": {
+					"Cnd_Pmp_On_Off": {
+						"objId": "5:30001",
+						"objName": "GL 25 00 05 b4 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Cnd_Pmp_SS": {
+						"objId": "5:30002",
+						"objName": "GL 25 00 05 b4 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Cnd_Pmp_Trip_SS": {
+						"objId": "5:30003",
+						"objName": "GL 25 00 05 b4 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Cnd_Pmp_AM_SS": {
+						"objId": "5:30004",
+						"objName": "GL 25 00 05 b4 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 60,
+					"Equipment_Faulty": false
+				}
+			},
+			"0001b40000": {
+				"BACnetDeviceAddress": "192.168.22.25",
+				"Eqp_Attributes": {
+					"Cnd_Pmp_On_Off": {
+						"objId": "5:30001",
+						"objName": "GL 25 00 05 b4 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Cnd_Pmp_SS": {
+						"objId": "5:30002",
+						"objName": "GL 25 00 05 b4 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Cnd_Pmp_Trip_SS": {
+						"objId": "5:30003",
+						"objName": "GL 25 00 05 b4 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Cnd_Pmp_AM_SS": {
+						"objId": "5:30004",
+						"objName": "GL 25 00 05 b4 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 60,
+					"Equipment_Faulty": false
+				}
+			},
+			"GL 25 00 07 b4": {
+				"BACnetDeviceAddress": "192.168.22.25",
+				"Eqp_Attributes": {
+					"Cnd_Pmp_On_Off": {
+						"objId": "5:30001",
+						"objName": "GL 25 00 05 b4 0 678",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Cnd_Pmp_SS": {
+						"objId": "5:30002",
+						"objName": "GL 25 00 05 b4 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					},
+					"Cnd_Pmp_Trip_SS": {
+						"objId": "5:30003",
+						"objName": "GL 25 00 05 b4 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"Cnd_Pmp_AM_SS": {
+						"objId": "5:30004",
+						"objName": "GL 25 00 05 b4 0 478",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:60:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 24,
+					"Equipment_Faulty": false
+				}
+			}
+		},
+		"NONGL_SS_COOLING_TOWER": {
+			"0001b70000": {
+				"BACnetDeviceAddress": "192.168.0.106:2209",
+				"Eqp_Attributes": {
+					"CTW_Low_Lvl": {
+						"objId": "19:21321",
+						"objName": "GL 9a 00 cd B8 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"CT_Out_Vlv_On_Off_Cmd": {
+						"objId": "19:21321",
+						"objName": "GL 9a 00 cd B8 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"CT_Out_Vlv_On_Off_Fbk": {
+						"objId": "19:21321",
+						"objName": "GL 9a 00 cd B8 0 678",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:00:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 15,
+					"Equipment_Faulty": false
+				},
+				"EQP_COMPONENTS": {
+					"NONGL_SS_COOLING_TOWER": {
+						"GL 9a 00 c0 B8": {
+							"BACnetDeviceAddress": "192.168.1.31",
+							"Eqp_Attributes": {
+								"CT_Fan_AM_SS": {
+									"objId": "19:21321",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_On_Off_Cmd": {
+									"objId": "5:21322",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_On_Off_SS": {
+									"objId": "19:21323",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_Run_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_Trip_SS": {
+									"objId": "5:21325",
+									"objName": "GL 9a 00 cd B8 0 479",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								}
+							},
+							"Eqp_Metrics": {
+								"rh_cumulative": 60,
+								"Equipment_Faulty": false
+							}
+						},
+						"GL 9a 00 c1 B8": {
+							"BACnetDeviceAddress": "192.168.1.31",
+							"Eqp_Attributes": {
+								"CT_Fan_AM_SS": {
+									"objId": "19:21321",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_On_Off_Cmd": {
+									"objId": "5:21322",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_On_Off_SS": {
+									"objId": "19:21323",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_Run_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_Trip_SS": {
+									"objId": "5:21325",
+									"objName": "GL 9a 00 cd B8 0 479",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								}
+							},
+							"Eqp_Metrics": {
+								"rh_cumulative": 60,
+								"Equipment_Faulty": false
+							}
+						}
+					},
+					"NONGL_SS_CT_VARIABLE_FAN": {}
+				}
+			},
+			"0000b70000": {
+				"BACnetDeviceAddress": "192.168.0.106:2209",
+				"Eqp_Attributes": {
+					"CTW_Low_Lvl": {
+						"objId": "19:21321",
+						"objName": "GL 9a 00 1a B8 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"CT_Out_Vlv_On_Off_Cmd": {
+						"objId": "19:21321",
+						"objName": "GL 9a 00 cd B8 0 678",
+						"presentValue": 0,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"CT_Out_Vlv_On_Off_Fbk": {
+						"objId": "19:21321",
+						"objName": "GL 9a 00 cd B8 0 678",
+						"presentValue": 1,
+						"measured_time": "2024-03-02 09:00:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"rh_cumulative": 20,
+					"Equipment_Faulty": false
+				},
+				"EQP_COMPONENTS": {
+					"NONGL_SS_COOLING_TOWER": {
+						"GL 9a 00 cd B8": {
+							"BACnetDeviceAddress": "192.168.1.31",
+							"Eqp_Attributes": {
+								"CT_Fan_AM_SS": {
+									"objId": "19:21321",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_On_Off_Cmd": {
+									"objId": "5:21322",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_On_Off_SS": {
+									"objId": "19:21323",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_Run_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_Trip_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								}
+							},
+							"Eqp_Metrics": {
+								"rh_cumulative": 15,
+								"Equipment_Faulty": false
+							}
+						},
+						"GL 9a 00 ce B8": {
+							"BACnetDeviceAddress": "192.168.1.31",
+							"Eqp_Attributes": {
+								"CT_Fan_AM_SS": {
+									"objId": "19:21321",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_On_Off_Cmd": {
+									"objId": "5:21322",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_On_Off_SS": {
+									"objId": "19:21323",
+									"objName": "GL 9a 00 cd B8 0 678",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_Run_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_Trip_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 cd B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								}
+							},
+							"Eqp_Metrics": {
+								"rh_cumulative": 60,
+								"Equipment_Faulty": false
+							}
+						},
+						"GL 9a 00 c3 B8": {
+							"BACnetDeviceAddress": "192.168.1.31",
+							"Eqp_Attributes": {
+								"CT_Fan_AM_SS": {
+									"objId": "19:21321",
+									"objName": "GL 9a 00 c3 B8 0 678",
+									"presentValue": 1,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_On_Off_Cmd": {
+									"objId": "5:21322",
+									"objName": "GL 9a 00 c3 B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_On_Off_SS": {
+									"objId": "19:21323",
+									"objName": "GL 9a 00 c3 B8 0 678",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:00:00.123"
+								},
+								"CT_Fan_Run_SS": {
+									"objId": "5:21324",
+									"objName": "GL 9a 00 c3 B8 0 478",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								},
+								"CT_Fan_Trip_SS": {
+									"objId": "5:21325",
+									"objName": "GL 9a 00 c3 B8 0 479",
+									"presentValue": 0,
+									"measured_time": "2024-03-02 09:60:00.123"
+								}
+							},
+							"Eqp_Metrics": {
+								"rh_cumulative": 60,
+								"Equipment_Faulty": false
+							}
+						}
+					}
+				}
+			}
+		},
+		"NONGL_SS_HEADER": {
+			"GL 24 00 15 b9": {
+				"BACnetDeviceAddress": "192.168.22.24",
+				"Eqp_Attributes": {
+					"CWH_ST": {
+						"objId": "5:35001",
+						"objName": "GL 24 00 05 b9 0 678",
+						"presentValue": 60,
+						"measured_time": "2024-03-02 09:00:00.123"
+					},
+					"setPoint": {
+						"objId": "5:35001",
+						"objName": "GL 24 00 05 b9 0 678",
+						"presentValue": 60,
+						"measured_time": "2024-03-02 09:00:00.123"
+					}
+				},
+				"Eqp_Metrics": {
+					"Equipment_Faulty": false,
+					"Monitor_Parameter": true,
+					"LOWER_THRESHOLD": 0.5,
+					"UPPER_THRESHOLD": 0.5,
+					"THRESHOLD_CROSSING_INTERVAL": 5	,
+					"THRESHOLD_CROSSED_TIMESTAMP": "",
+					"THRESHOLD_CROSSED_VALUE": 0
+				}
+			}
+		}
+	}
+}

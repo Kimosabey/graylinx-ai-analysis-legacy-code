@@ -1,0 +1,247 @@
+{ 
+    "meeting-rooms": {
+        "name": "my-map",
+        "areas": [
+            {
+                "name":"meeting-room-1",
+                "meeting_room_id":"36db7fad-5c15-4381-9cd8-f855f48be5c8",
+                "shape":"rect",
+                "bound":[[148.509,270.975],[46.559,87.525]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)",
+                "no_of_seats":10
+             },
+             {
+                "name":"meeting-room-2",
+                "meeting_room_id":"c29acc9b-d1a3-4c5f-bc8a-739d0d950571",
+                "shape":"rect",
+                "bound": [[373.629,232.487],[307.129,86.662]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)",
+                "no_of_seats":6
+             },
+             {
+                "name":"meeting-room-3",
+                "meeting_room_id":"a1b9b462-531f-4c77-985b-654f4bc73b33",
+                "shape":"rect",
+                "bound":[[298.729,760.237],[232.479,673.312]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)",
+                "no_of_seats":6
+             }
+        ]
+    },
+    "hot-desking": {
+        "name": "my-map",
+        "areas": [
+            {
+                "name":"S:1",
+                "id":"7bf832f7-16ed-473a-a8b2-f0c735c6012b",
+                "shape":"rect",
+                "bound":[[56.118,296.750],[77.118,340.750]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:2",
+                "id":"7bf832f7-16ed-473a-a8b2-f0c735c6012b",
+                "shape":"rect",
+                "bound":[[115.118,339.750],[91.118,295.750]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:3",
+                "id":"fdeeab0c-09f3-4af2-b776-a6b55c7a182d",
+                "shape":"rect",
+                "bound":[[149.118,337.750],[126.618,295.750]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:4",
+                "id":"fdeeab0c-09f3-4af2-b776-a6b55c7a182d",
+                "shape":"rect",
+                "bound":[[185.118,340.250],[162.618,295.250]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:5",
+                "id":"fdeeab0c-09f3-4af2-b776-a6b55c7a182d",
+                "shape":"rect",
+                "bound":[[221.218,339.750],[199.218,294.250]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:6",
+                "id":"fdeeab0c-09f3-4af2-b776-a6b55c7a182d",
+                "shape":"rect",
+                "bound":[[220.718,403.250],[198.718,358.750]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:7",
+                "id":"fdeeab0c-09f3-4af2-b776-a6b55c7a182d",
+                "shape":"rect",
+                "bound":[[184.193,402.300],[162.693,356.300]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:8",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[149.693,402.300],[127.193,359.300]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:9",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[113.693,401.300],[91.193,357.800]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:10",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[77.693,402.800],[55.193,356.800]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:11",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[76.693,464.300],[56.193,420.800]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:12",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[113.693,464.800],[90.693,420.300]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:13",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[149.693, 463.300],[126.193,418.300]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:14",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[186.193,  463.800],[163.193,419.300]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:15",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[221.693,464.800],[198.193,418.300]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:16",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[221.693,526.900],[198.693,480.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:17",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[184.193,526.400],[162.693,480.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:18",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[148.193,525.900],[126.693,481.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:19",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[113.693,525.900],[90.693,482.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:20",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[78.193,526.900],[55.693,481.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:21",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[77.793,588.400],[55.793,543.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:22",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[113.293,588.400],[91.793,543.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:23",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[149.793,587.400],[126.793,542.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:24",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[185.793,587.900],[163.293,543.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:25",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[221.293,588.900],[198.293,543.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:26",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[221.293,651.900],[197.793,604.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:27",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[184.793,649.400],[184.793,649.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:28",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[149.293,649.900],[125.793,605.400]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:29",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[113.793,649.900],[91.293,604.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             },
+             {
+                "name":"S:30",
+                "id":"e77521fe-958c-402c-be7b-f2ffda7da05a",
+                "shape":"rect",
+                "bound":[[78.293,649.900],[55.293,606.900]],
+                "preFillColor":"rgba(0, 179, 0, 0.7)"
+             }
+           
+        ]
+    }
+}
