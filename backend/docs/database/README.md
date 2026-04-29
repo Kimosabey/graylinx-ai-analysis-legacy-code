@@ -8,6 +8,7 @@ This directory contains comprehensive documentation for the MySQL database infra
 | :--- | :--- |
 | **[Schema Overview](./SCHEMA_OVERVIEW.md)** | High-level overview of the Graylinx data model and core relationships. |
 | **[Table Reference](./TABLE_REFERENCE.md)** | Detailed inventory of tables in the main `jupiter` database, including sharded telemetry tables. |
+| **[Routines Reference](./ROUTINES_REFERENCE.md)** | Documentation of Stored Procedures, Functions, and Events (The DB Logic). |
 | **[Server Inventory](./SERVER_INVENTORY.md)** | Audit of all client/tenant databases hosted on the server (Multi-tenant architecture). |
 | **[Critical Flaws](./DB_CRITICAL_FLAWS.md)** | Legacy architectural issues and security risks. |
 | **[Gaps & Optimizations](./DB_GAPS_AND_OPTIMIZATIONS.md)** | Missing features and immediate performance fixes. |
