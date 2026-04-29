@@ -19,7 +19,9 @@ The platform employs three distinct categories of data pipelines:
 | **[Ingestion Pipeline](./INGESTION_PIPELINE.md)** | Hardware data acquisition | 15 Minutes | `dataLoader.js`, `hvacBACnetClient.js` |
 | **[Analytics Pipeline](./ANALYTICS_PIPELINE.md)** | Performance & Energy Analytics | 15 Minutes | `analytic_report_config.json`, `generateAggregationProcedures.js` |
 | **[Operational Pipeline](./OPERATIONAL_PIPELINE.md)** | Real-time Control (CPM) | 15 Seconds | `app.js`, `decision_engine.js` |
-| **[Analysis & Optimization](./ANALYSIS_AND_OPTIMIZATION.md)** | Gaps & Future Roadmap | N/A | Review for future sprints |
+| **[Critical Flaws](./ETL_CRITICAL_FLAWS.md)** | Legacy architectural issues and logic "black boxes". |
+| **[Gaps & Optimizations](./ETL_GAPS_AND_OPTIMIZATIONS.md)** | Missing validation layers and observability needs. |
+| **[New Approach](./NEW_ETL_APPROACH.md)** | Future roadmap for a code-based, streaming architecture. |
 
 ## Glossary
 
