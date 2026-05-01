@@ -1,0 +1,378 @@
+{
+  "site": {
+    "site_id": "site_001",
+    "site_name": "Unicharm",
+    "interval_minutes": 5,
+    "backfill_start_date": "2026-01-01T00:00:00",
+    "lag_minutes": 10,
+    "check_run_status": true
+  },
+
+  "device_types": {
+    "chiller": {
+      "device_table_pattern": "ch_{N}b00000_om_p",
+      "run_status": { "param_id": "CH_Motor_Run", "active_value": "1.0" },
+      "other_params": [
+        {
+          "param_id": "Act_Pwr_Total",
+          "normalized_column": "kw",
+          "source": "energy",
+          "is_kw": true
+        },
+        {
+          "param_id": "CH_Entering_Chilled_Lqd_Temp",
+          "normalized_column": "evap_entering_temp",
+          "source": "device",
+          "is_kw": true
+        },
+        {
+          "param_id": "CH_Leaving_Chilled_Lqd_Temp",
+          "normalized_column": "evap_leaving_temp",
+          "source": "device",
+          "is_kw": true
+        },
+        {
+          "param_id": "Flow_Meter_Eva_1",
+          "normalized_column": "evap_flow",
+          "source": "device",
+          "is_kw": true
+        }
+      ],
+      "direct_params": [
+        {
+          "table": "{device_table}",
+          "param_id": "CH_Operating_hrs",
+          "normalized_column": "run_hours"
+        },
+        {
+          "table": "{device_table}",
+          "param_id": "CH_Entering_CDW_Lqd_Temp",
+          "normalized_column": "cond_entering_temp"
+        },
+        {
+          "table": "{device_table}",
+          "param_id": "CH_Leaving_CDW_Lqd_Temp",
+          "normalized_column": "cond_leaving_temp"
+        },
+        {
+          "table": "{device_table}",
+          "param_id": "Flow_Meter_CD_1",
+          "normalized_column": "cond_flow"
+        },
+        {
+          "table": "{btu_meter_table}",
+          "param_id": "Btu_Meter_Inlet_Temp",
+          "normalized_column": "btu_inlet_temp"
+        },
+        {
+          "table": "{btu_meter_table}",
+          "param_id": "Btu_Meter_Outlet_Temp",
+          "normalized_column": "btu_outlet_temp"
+        }
+      ],
+      "calculated_params": [
+        {
+          "normalized_column": "chw_delta_t",
+          "formula": "evap_entering_temp - evap_leaving_temp"
+        },
+        {
+          "normalized_column": "tr",
+          "formula": "evap_flow * (evap_entering_temp - evap_leaving_temp) * 0.33"
+        },
+        { "normalized_column": "kwh", "formula": "kw * on_minutes / 60" },
+        { "normalized_column": "trh", "formula": "tr * on_minutes / 60" },
+        {
+          "normalized_column": "cumulative_kwh",
+          "formula": "prev_cumulative_kwh + kwh"
+        },
+        {
+          "normalized_column": "cumulative_trh",
+          "formula": "prev_cumulative_trh + trh"
+        },
+        { "normalized_column": "kw_per_tr", "formula": "kw / tr" },
+        {
+          "normalized_column": "btu_delta_t",
+          "formula": "btu_outlet_temp - btu_inlet_temp"
+        },
+        { "normalized_column": "chiller_load", "formula": "(tr / 550) * 100" }
+      ]
+    },
+
+    "condenser_pump": {
+      "device_table_pattern": "condpu_{N}b40000_om_p",
+      "run_status": { "param_id": "Cnd_Pmp_Run_SS", "active_value": "active" },
+      "other_params": [
+        {
+          "param_id": "Act_Pwr_Total",
+          "normalized_column": "kw",
+          "source": "energy",
+          "is_kw": true
+        }
+      ],
+      "direct_params": [],
+      "calculated_params": [
+        { "normalized_column": "kwh", "formula": "kw * on_minutes / 60" },
+        {
+          "normalized_column": "cumulative_kwh",
+          "formula": "prev_cumulative_kwh + kwh"
+        }
+      ]
+    },
+
+    "primary_pump": {
+      "device_table_pattern": "pv_{N}b20000_om_p",
+      "run_status": {
+        "param_id": "PriV_Pmp_Run_Fbk",
+        "active_value": "active"
+      },
+      "other_params": [
+        {
+          "param_id": "PriV_Pmp_Drive_Power",
+          "normalized_column": "kw",
+          "source": "device",
+          "is_kw": true
+        }
+      ],
+      "direct_params": [
+        {
+          "table": "{device_table}",
+          "param_id": "PriV_Pmp_Drive_Run_Hrs",
+          "normalized_column": "run_hours"
+        }
+      ],
+      "calculated_params": [
+        { "normalized_column": "kwh", "formula": "kw * on_minutes / 60" },
+        {
+          "normalized_column": "cumulative_kwh",
+          "formula": "prev_cumulative_kwh + kwh"
+        }
+      ]
+    },
+
+    "cooling_tower": {
+      "device_table_pattern": "ct_{N}b70000_om_p",
+      "run_status": { "param_id": "sts_on_off_00", "active_value": "active" },
+      "other_params": [
+        {
+          "param_id": "CT_Var_Fan_1_Motor_Power",
+          "normalized_column": "fan1_kw",
+          "source": "device",
+          "is_kw": true
+        },
+        {
+          "param_id": "CT_Var_Fan_2_Motor_Power",
+          "normalized_column": "fan2_kw",
+          "source": "device",
+          "is_kw": true
+        },
+        {
+          "param_id": "CT_Var_Fan_3_Motor_Power",
+          "normalized_column": "fan3_kw",
+          "source": "device",
+          "is_kw": true
+        }
+      ],
+      "direct_params": [
+        {
+          "table": "{device_table}",
+          "param_id": "CT_Var_Fan_1_Running_Hrs",
+          "normalized_column": "F1_run_hours"
+        },
+        {
+          "table": "{device_table}",
+          "param_id": "CT_Var_Fan_2_Running_Hrs",
+          "normalized_column": "F2_run_hours"
+        },
+        {
+          "table": "{device_table}",
+          "param_id": "CT_Var_Fan_3_Running_Hrs",
+          "normalized_column": "F3_run_hours"
+        }
+      ],
+      "calculated_params": [
+        { "normalized_column": "kw", "formula": "fan1_kw + fan2_kw + fan3_kw" },
+        {
+          "normalized_column": "fan1_kwh",
+          "formula": "fan1_kw * on_minutes / 60"
+        },
+        {
+          "normalized_column": "fan2_kwh",
+          "formula": "fan2_kw * on_minutes / 60"
+        },
+        {
+          "normalized_column": "fan3_kwh",
+          "formula": "fan3_kw * on_minutes / 60"
+        },
+        {
+          "normalized_column": "kwh",
+          "formula": "fan1_kwh + fan2_kwh + fan3_kwh"
+        },
+        {
+          "normalized_column": "cumulative_kwh",
+          "formula": "prev_cumulative_kwh + kwh"
+        },
+        {
+          "normalized_column": "cumulative_fan1_kwh",
+          "formula": "prev_cumulative_fan1_kwh + fan1_kwh"
+        },
+        {
+          "normalized_column": "cumulative_fan2_kwh",
+          "formula": "prev_cumulative_fan2_kwh + fan2_kwh"
+        },
+        {
+          "normalized_column": "cumulative_fan3_kwh",
+          "formula": "prev_cumulative_fan3_kwh + fan3_kwh"
+        },
+        {
+          "normalized_column": "run_hours",
+          "formula": "F1_run_hours + F2_run_hours + F3_run_hours"
+        }
+      ]
+    }
+  },
+
+  "devices": [
+    {
+      "device_type": "chiller",
+      "instance": "chiller_1",
+      "ss_id": "38a1c57a-1d2b-477c-8ae9-b00bcba618f2",
+      "chiller_type": "single",
+      "energy_table": "em_0001000000_om_p"
+    },
+    {
+      "device_type": "chiller",
+      "instance": "chiller_2",
+      "ss_id": "d94e57ab-af21-41a7-a5d2-6f722d4f3f6b",
+      "chiller_type": "single",
+      "energy_table": "em_0006000000_om_p"
+    },
+    {
+      "device_type": "condenser_pump",
+      "instance": "condenser_pump_0102",
+      "ss_id": "0fd2e4ec-2731-4b44-9595-d188c566d09f",
+      "device_table": "condpu_0001b40000_om_p",
+      "energy_table": "em_0007000000_om_p",
+      "run_status_any": [
+        {
+          "table": "condpu_0001b40000_om_p",
+          "param_id": "Cnd_Pmp_Run_SS",
+          "active_value": "active"
+        },
+        {
+          "table": "condpu_0002b40000_om_p",
+          "param_id": "Cnd_Pmp_Run_SS",
+          "active_value": "active"
+        }
+      ],
+      "committed_config": { "constant": 25.89, "use_load": false },
+      "extra_calculated_params": [
+        { "normalized_column": "run_hours", "formula": "on_minutes / 60 / 2" }
+      ]
+    },
+    {
+      "device_type": "condenser_pump",
+      "instance": "condenser_pump_03",
+      "ss_id": "847e0204-7bdf-4a02-ac64-8366a9334260",
+      "energy_table": "em_0002000000_om_p",
+      "extra_calculated_params": [
+        { "normalized_column": "run_hours", "formula": "on_minutes / 60" }
+      ]
+    },
+    {
+      "device_type": "primary_pump",
+      "instance": "primary_pump_1",
+      "ss_id": "08c82cf5-101e-4266-98da-9da5dbdd826d",
+      "committed_config": { "constant": 48.1, "use_load": true }
+    },
+    {
+      "device_type": "primary_pump",
+      "instance": "primary_pump_2",
+      "ss_id": "a12b994e-4730-4e08-a951-a1c96ae8e77f"
+    },
+    {
+      "device_type": "primary_pump",
+      "instance": "primary_pump_3",
+      "ss_id": "aefcae0a-803f-4ab9-bb89-64080308d9b4"
+    },
+    {
+      "device_type": "cooling_tower",
+      "instance": "cooling_tower_1",
+      "ss_id": "6752bc66-4250-49ba-8a5e-472a134d823d",
+      "run_status_any": [
+        {
+          "table": "ct_0001b70000_om_p",
+          "param_id": "CT_VAR_FAN_1_RUN_SS",
+          "active_value": "active"
+        },
+        {
+          "table": "ct_0001b70000_om_p",
+          "param_id": "CT_VAR_FAN_2_RUN_SS",
+          "active_value": "active"
+        },
+        {
+          "table": "ct_0001b70000_om_p",
+          "param_id": "CT_VAR_FAN_3_RUN_SS",
+          "active_value": "active"
+        }
+      ],
+      "committed_config": { "constant": 33, "use_load": true }
+    },
+    {
+      "device_type": "cooling_tower",
+      "instance": "cooling_tower_2",
+      "ss_id": "cd39028c-52a8-4d9c-bf6b-ae39e501e1c3",
+      "run_status_any": [
+        {
+          "table": "ct_0002b70000_om_p",
+          "param_id": "CT_VAR_FAN_1_RUN_SS",
+          "active_value": "active"
+        },
+        {
+          "table": "ct_0002b70000_om_p",
+          "param_id": "CT_VAR_FAN_2_RUN_SS",
+          "active_value": "active"
+        },
+        {
+          "table": "ct_0002b70000_om_p",
+          "param_id": "CT_VAR_FAN_3_RUN_SS",
+          "active_value": "active"
+        }
+      ]
+    }
+  ],
+
+  "plant": {
+    "normalized_table": "plant_normalized",
+    "direct_params": [
+      {
+        "table": "cpm_0001bc0000_om_p",
+        "param_id": "AMBIENT_TEMP",
+        "normalized_column": "ambient_temp"
+      },
+      {
+        "table": "cpm_0001bc0000_om_p",
+        "param_id": "HUMIDITY_MONITORING",
+        "normalized_column": "humidity_monitoring"
+      }
+    ],
+    "calculated_params": [
+      {
+        "normalized_column": "wet_bulb_temp",
+        "formula": "ambient_temp * atan(0.151977 * sqrt(humidity_monitoring + 8.313659)) + atan(ambient_temp + humidity_monitoring) - atan(humidity_monitoring - 1.676331) + 0.00391838 * pow(humidity_monitoring, 1.5) * atan(0.023101 * humidity_monitoring) - 4.686035"
+      }
+    ]
+  },
+
+  "btu_meter": {
+    "table": "btm_0001110000_om_p",
+    "params": {
+      "outlet_temp": "Btu_Meter_Outlet_Temp",
+      "inlet_temp": "Btu_Meter_Inlet_Temp",
+      "actual_flow": "Btu_Meter_Actual_Flow",
+      "actual_power": "Btu_Meter_Actual_Power",
+      "energy_consump": "Btu_Meter_Energy_Consump",
+      "energy_consump_mwh": "Btu_Meter_Energy_Consump_Mwh",
+      "volume_m3": "Btu_Meter_Volume_m3"
+    }
+  }
+}

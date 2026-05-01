@@ -23,7 +23,28 @@ Implement a tiered storage strategy.
 - **Warm Data (31-365 days)**: Compressed partitions or aggregated summaries.
 - **Cold Data (1 year+)**: Export to S3/MinIO in Parquet format for historical audit.
 
+## The Path to Modernization: Better vs. Best
+
+To evolve the Graylinx data tier, we should distinguish between immediate improvements (Better) and a complete industrial transformation (Best).
+
+### 🔵 The "Better" Version (Evolutionary)
+*Focus: Stability, Security, and Ease of Maintenance.*
+- **Unified Schema**: Use a migration runner (Sequelize/Knex) to keep all 10+ tenant databases 100% in sync.
+- **Security Lockdown**: Replace `root` with a restricted `gl_app` user to limit the "blast radius" of security breaches.
+- **DB Partitioning**: Move from 1,000+ sharded tables to a single `telemetry` table partitioned by `device_id`.
+- **Logic Extraction**: Gradually move math calculations from SQL Stored Procedures into testable Node.js code.
+
+### 🟣 The "Best" Version (Revolutionary)
+*Focus: Hyper-Scale, Real-Time Streaming, and AI Readiness.*
+- **Polyglot Persistence**:
+    - **PostgreSQL**: For complex Metadata and Site Configurations.
+    - **ClickHouse / TimescaleDB**: For high-performance analytics on billions of telemetry rows.
+- **Event-Driven Architecture (Kafka)**: Decouple hardware ingestion from the database using a message broker.
+- **AI-Powered Analytics**: Implement Python-based services for real-time anomaly detection and predictive maintenance.
+
+---
+
 ## Implementation Roadmap
-1.  **Phase 1**: Security Lockdown & Non-Root User provisioning.
-2.  **Phase 2**: Implementation of automated schema migrations.
-3.  **Phase 3**: Integration of a dedicated Timeseries/Columnar DB for analytics.
+1.  **Phase 1**: Security Lockdown & Non-Root User provisioning (Short term).
+2.  **Phase 2**: Implementation of automated schema migrations and Logic Extraction (Medium term).
+3.  **Phase 3**: Integration of a dedicated Timeseries/Columnar DB for analytics (Long term).

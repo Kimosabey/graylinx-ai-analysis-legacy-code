@@ -1,0 +1,10 @@
+# Energy Analytics — Python dependencies
+#
+# Kept deliberately minimal. Everything else is standard library
+# (asyncio, json, datetime, math, logging, signal, dataclasses, bisect, re).
+#
+# aiomysql is the async MySQL driver — the nearest Python analogue to
+# Node.js mysql2/promise. Pulls in PyMySQL as its transport.
+
+aiomysql>=0.2.0
+PyMySQL>=1.1.0
